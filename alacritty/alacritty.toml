@@ -1,0 +1,48 @@
+[window]
+dynamic_title = true
+padding = { x=8, y=8 }
+decorations = "None"
+dynamic_padding = false
+opacity = 0.9
+blur=true
+
+[font]
+normal = { family="JetBrains Mono", style="Regular" }
+size = 8
+
+[scrolling]
+multiplier=2
+
+[colors]
+
+cursor = { text="CellBackground", cursor="CellForeground" }
+
+[colors.primary]
+background="#112717"
+foreground="#AAE8B6"
+
+[colors.normal]
+black = "#203F27"
+red = "#BB334C"
+green = "#4E7B31"
+yellow = "#8F631C"
+blue = "#296DBD"
+magenta = "#9837BD"
+cyan = "#217B7B"
+white = "#6DB47C"
+
+[colors.bright]
+black = "#396844"
+red = "#DB475F"
+green = "#5F953C"
+yellow = "#AC7925"
+blue = "#3D85DC"
+magenta = "#B250D9"
+cyan = "#2A9595"
+white = "#99DEA7"
+
+[cursor]
+style={shape="Beam", blinking="Always"}
+blink_interval = 500
+unfocused_hollow = true
+thickness = 0.15

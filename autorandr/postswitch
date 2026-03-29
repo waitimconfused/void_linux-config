@@ -1,0 +1,5 @@
+#!/bin/sh
+
+notify-send -i display "Display profile" "$AUTORANDR_CURRENT_PROFILE"
+
+i3-msg restart

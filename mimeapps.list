@@ -1,0 +1,43 @@
+[Default Applications]
+x-scheme-handler/http=userapp-Firefox-BBQPM3.desktop
+x-scheme-handler/https=userapp-Firefox-BBQPM3.desktop
+x-scheme-handler/chrome=userapp-Firefox-BBQPM3.desktop
+text/html=userapp-Firefox-BBQPM3.desktop
+application/x-extension-htm=userapp-Firefox-BBQPM3.desktop
+application/x-extension-html=userapp-Firefox-BBQPM3.desktop
+application/x-extension-shtml=userapp-Firefox-BBQPM3.desktop
+application/xhtml+xml=userapp-Firefox-BBQPM3.desktop
+application/x-extension-xhtml=userapp-Firefox-BBQPM3.desktop
+application/x-extension-xht=userapp-Firefox-BBQPM3.desktop
+x-scheme-handler/obsidian=obsidian.desktop
+application/zip=userapp-unar -d-8RGRK3.desktop
+application/octet-stream=code-oss.desktop
+application/x-compressed-tar=userapp-unar -d-8RGRK3.desktop
+application/x-zerosize=code-oss.desktop
+inode/directory=thunar.desktop
+image/vnd.microsoft.icon=feh.desktop
+
+[Added Associations]
+x-scheme-handler/http=userapp-Firefox-BBQPM3.desktop;userapp-Firefox-N4HVJ3.desktop;
+x-scheme-handler/https=userapp-Firefox-BBQPM3.desktop;userapp-Firefox-N4HVJ3.desktop;
+x-scheme-handler/chrome=userapp-Firefox-BBQPM3.desktop;userapp-Firefox-N4HVJ3.desktop;
+text/html=userapp-Firefox-N4HVJ3.desktop;userapp-Firefox-BBQPM3.desktop;
+application/x-extension-htm=userapp-Firefox-N4HVJ3.desktop;userapp-Firefox-BBQPM3.desktop;
+application/x-extension-html=userapp-Firefox-N4HVJ3.desktop;userapp-Firefox-BBQPM3.desktop;
+application/x-extension-shtml=userapp-Firefox-N4HVJ3.desktop;userapp-Firefox-BBQPM3.desktop;
+application/xhtml+xml=userapp-Firefox-N4HVJ3.desktop;userapp-Firefox-BBQPM3.desktop;
+application/x-extension-xhtml=userapp-Firefox-N4HVJ3.desktop;userapp-Firefox-BBQPM3.desktop;
+application/x-extension-xht=userapp-Firefox-N4HVJ3.desktop;userapp-Firefox-BBQPM3.desktop;
+application/vnd.flatpak.ref=Alacritty.desktop;
+inode/directory=code-oss.desktop;thunar.desktop;
+application/x-desktop=nvim.desktop;
+image/png=feh.desktop;gimp.desktop;
+application/zip=thunar.desktop;userapp-unar -d-8RGRK3.desktop;
+application/octet-stream=Obsidian.desktop;code-oss.desktop;
+image/jpeg=gimp.desktop;
+application/x-compressed-tar=userapp-unar -d-8RGRK3.desktop;
+application/x-zerosize=code-oss.desktop;
+image/vnd.microsoft.icon=feh.desktop;
+
+[Removed Associations]
+application/zip=userapp-}"-NI1QK3.desktop;userapp-unzip-CAU3K3.desktop;

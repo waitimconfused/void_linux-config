@@ -1,0 +1,159 @@
+/*****************************************************************************t
+* ROFI Color theme
+* User: Kenneth
+* Copyright: Custom Theme
+******************************************************************************/
+
+* {
+    /* Theme Colours */
+    custom-background: #112717;
+    custom-foreground: #AAE8B6;
+    custom-black: #203F27;
+    custom-red: #BB334C;
+    custom-green: #4E7B31;
+    custom-yellow: #8F631C;
+    custom-blue: #296DBD;
+    custom-magenta: #9837BD;
+    custom-cyan: #217B7B;
+    custom-white: #6DB47C;
+
+    /* ROFI Color Theme */
+    background:                  @custom-background;
+    background-color:            @background;
+    foreground:                  @custom-foreground;
+    border-color:                @foreground;
+    separatorcolor:              @custom-black;
+    scrollbar-handle:            @custom-foreground;
+
+    normal-background:           @custom-background;
+    normal-foreground:           @custom-foreground;
+    alternate-normal-background: @custom-foreground;
+    alternate-normal-foreground: @custom-background;
+    selected-normal-background:  @custom-green;
+    selected-normal-foreground:  @custom-background;
+
+    active-background:           @custom-red;
+    active-foreground:           @custom-red;
+    alternate-active-background: @custom-red;
+    alternate-active-foreground: @custom-red;
+    selected-active-background:  @custom-red;
+    selected-active-foreground:  @custom-red;
+
+    urgent-background:           @custom-red;
+    urgent-foreground:           @custom-red;
+    alternate-urgent-background: @custom-red;
+    alternate-urgent-foreground: @custom-red;
+    selected-urgent-background:  @custom-red;
+    selected-urgent-foreground:  @custom-red;
+}
+
+window {
+    height: 500px;
+    background-color: #112717E6;
+    padding: 8;
+    border-radius: 8px;
+    children: [ mainbox ];
+
+}
+mainbox {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    children: [ inputbar, listview ];
+}
+message {
+    border: 2px dash 0px 2px dash 0px;
+    border-color: @custom-green;
+    margin: 2px 0 4px 0;
+    background-color: transparent;
+    padding: 8px 4px;
+}
+textbox {
+    text-color: @custom-foreground;
+    background-color: transparent;
+    border: 0px;
+}
+listview {
+    columns: 2;
+    border: 0px;
+    border-color: @separatorcolor;
+    background-color: transparent;
+    spacing: 8px;
+    scrollbar: false;
+    padding: 0px;
+}
+element {
+    padding: 8px;
+    border-radius: 8px;
+    text-color: @custom-foreground;
+    background-color: transparent;
+}
+
+element.selected {
+    background-color: @custom-green;
+    text-color: @custom-background;
+}
+
+element-icon {
+    background-color: inherit;
+    margin: 0 8px 0 0;
+    size: 24px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+mode-switcher {
+    // padding: 8px 0 0 0;
+    margin: 0;
+    background-color: transparent;
+    spacing: 8px;
+}
+button {
+    padding: 4px 4px 4px 4px;
+    width: 40px;
+    border: 2px;
+    background-color: transparent;
+    border-color: @custom-green;
+    text-color: @custom-foreground;
+    border-radius: 8px;
+    text-align: center;
+}
+button.selected {
+    background-color: @custom-green;
+    text-color: @custom-background;
+}
+
+inputbar {
+    spacing: 8px;
+    text-color: @custom-red;
+    padding: 0 0 8px 0;
+    margin: 0 0 4px 0;
+    background-color: transparent;
+    border: 0px 0px 1px 0px;
+    border-color: @custom-foreground;
+    children: [ prompt, entry, mode-switcher ];
+}
+case-indicator {
+    spacing: 0;
+    text-color: @custom-red;
+}
+entry {
+    placeholder: "Search...";
+    spacing: 0;
+    text-color: @custom-foreground;
+    background-color: transparent;
+    padding: 6px;
+}
+prompt {
+    spacing: 0;
+    text-color: @custom-background;
+    background-color: @custom-green;
+    border-radius: 8px;
+    padding: 4px 12px 4px 12px;
+    border: 2px;
+    width: 40px;
+    border-color: @custom-green;
+}

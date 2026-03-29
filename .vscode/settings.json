@@ -1,0 +1,37 @@
+//* Note: This is is for when the  .config directory is opened in VS Code (Code - OSS).
+//* It is not a configuration folder like the others
+
+{
+	"files.exclude": {
+		"Arduino IDE/": true,
+		"arduino-ide/": true,
+		"autostart/": true,
+		"blender/": true,
+		"Blockbench/": true,
+		"Code - OSS/": true,
+		"dconf/": true,
+		"desmos-offline-mode/": true,
+		"discord/": true,
+		"Electron/": true,
+		"Element/": true,
+		"GIMP/": true,
+		"go/": true,
+		"blockbench/": true,
+		"ibus/": true,
+		"instaloader/": true,
+		"kiwix-desktop/": true,
+		"kraxarn/": true,
+		"menus/": true,
+		"Mousepad/": true,
+		"obsidian/": true,
+		"procps/": true,
+		"qalculate/": true,
+		"pulse/": true,
+		"Thunar/": true,
+		"tsnet-chat-server/": true,
+		"Undertype/": true,
+		"unity3d/": true,
+		"xfce4/": true,
+		"QtProject.conf": true
+	}
+}

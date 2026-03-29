@@ -1,0 +1,38 @@
+
+configuration {
+	show-icons: true;
+	icon-theme: "kora";
+
+	// display-drun: "Apps ";
+	// display-window: "Windows ";
+	// display-filebrowser: "Files ";
+	// display-run: "Terminal ";
+	// display-ssh: "SSH";
+	// display-calc: "Calculator 󰇼";
+
+	display-drun: "";
+	display-window: "";
+	display-filebrowser: "";
+	display-run: "";
+	display-ssh: "";
+	display-calc: "󰇼";
+
+	font: "JetBrains Mono 12";
+
+	filebrowser {
+		directory: "/home/kenneth/";
+		directories-first: true;
+		sorting-method:    "name";
+	}
+
+	kb-element-next: "";
+	kb-element-prev: "";
+
+	kb-cancel: "Super+space,Escape";
+	kb-mode-next: "Alt+Right,Tab";
+	kb-mode-previous: "Alt+Left,ISO_Left_Tab";
+
+	modes: [ "drun", "window", "filebrowser", "calc", "run", "ssh" ];
+}
+
+@theme "/home/kenneth/.config/rofi/theme.rasi"
