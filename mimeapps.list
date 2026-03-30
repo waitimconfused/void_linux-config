@@ -15,7 +15,7 @@ application/octet-stream=code-oss.desktop
 application/x-compressed-tar=userapp-unar -d-8RGRK3.desktop
 application/x-zerosize=code-oss.desktop
 inode/directory=thunar.desktop
-image/vnd.microsoft.icon=feh.desktop
+image/vnd.microsoft.icon=org.xfce.ristretto.desktop;feh.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-Firefox-BBQPM3.desktop;userapp-Firefox-N4HVJ3.desktop;
@@ -31,13 +31,13 @@ application/x-extension-xht=userapp-Firefox-N4HVJ3.desktop;userapp-Firefox-BBQPM
 application/vnd.flatpak.ref=Alacritty.desktop;
 inode/directory=code-oss.desktop;thunar.desktop;
 application/x-desktop=nvim.desktop;
-image/png=feh.desktop;gimp.desktop;
+image/png=org.xfce.ristretto.desktop;gimp.dekstop;feh.desktop;
 application/zip=thunar.desktop;userapp-unar -d-8RGRK3.desktop;
 application/octet-stream=Obsidian.desktop;code-oss.desktop;
-image/jpeg=gimp.desktop;
+image/jpeg=org.xfce.ristretto.desktop;gimp.desktop;feh.desktop;
 application/x-compressed-tar=userapp-unar -d-8RGRK3.desktop;
 application/x-zerosize=code-oss.desktop;
-image/vnd.microsoft.icon=feh.desktop;
+image/vnd.microsoft.icon=org.xfce.ristretto.desktop;gimp.desktop;feh.desktop;
 
 [Removed Associations]
 application/zip=userapp-}"-NI1QK3.desktop;userapp-unzip-CAU3K3.desktop;
