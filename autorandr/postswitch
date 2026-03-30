@@ -3,3 +3,5 @@
 notify-send -i display "Display profile" "$AUTORANDR_CURRENT_PROFILE"
 
 i3-msg restart
+
+exec $HOME/.config/i3/script/nightlight.sh
