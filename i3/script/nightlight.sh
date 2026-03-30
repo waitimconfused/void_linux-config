@@ -1,6 +1,6 @@
 #!/bin/bash
 
-value_location="$HOME/.config/i3/script/nightlight-value"
+value_location="$HOME/.config/i3/script/stored_data/nightlight-value"
 
 on_value="1.0:0.88:0.76"
 off_value="1:1:1"

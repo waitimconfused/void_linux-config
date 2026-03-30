@@ -14,6 +14,7 @@ GIMP/
 go/
 blockbench/
 ibus/
+i3/script/stored_data/*
 instaloader/
 kiwix-desktop/
 kraxarn/

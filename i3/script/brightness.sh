@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE="$HOME/.config/i3/script/brightness-value"
+FILE="$HOME/.config/i3/script/stored_data/brightness-value"
 
 STEP_SIZE=5
 
