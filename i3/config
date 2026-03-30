@@ -41,8 +41,8 @@ floating_modifier $mod
 
 include addition/*.conf
 
-exec_always /home/kenneth/.fehbg
-exec_always /home/kenneth/.config/polybar/launch.sh
+exec_always $HOME/.fehbg
+exec_always $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf --vsync
 
 exec libinput-gestures-setup start

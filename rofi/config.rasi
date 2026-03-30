@@ -20,7 +20,7 @@ configuration {
 	font: "JetBrains Mono 12";
 
 	filebrowser {
-		directory: "/home/kenneth/";
+		directory: "/home/";
 		directories-first: true;
 		sorting-method:    "name";
 	}
@@ -32,7 +32,7 @@ configuration {
 	kb-mode-next: "Alt+Right,Tab";
 	kb-mode-previous: "Alt+Left,ISO_Left_Tab";
 
-	modes: [ "drun", "window", "filebrowser", "calc", "run", "ssh" ];
+	modes: [ "drun", "window", "calc", "run", "ssh" ];
 }
 
-@theme "/home/kenneth/.config/rofi/theme.rasi"
+@theme "./theme.rasi"
