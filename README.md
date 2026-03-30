@@ -28,34 +28,32 @@ Some folders have been hidden inside of VS Code (Code - OSS), because they are n
 
 List of hidden folders: (see `.vscode/settings.json`)
 
-<div style="display:flex; flex-direction: row;">
-	<li>`./Arduino IDE/`</li>
-	<li>`./arduino-ide/`</li>
-	<li>`./autostart/`</li>
-	<li>`./blender/`</li>
-	<li>`./Blockbench/`</li>
-	<li>`./Code - OSS/`</li>
-	<li>`./dconf/`</li>
-	<li>`./desmos-offline-mode/`</li>
-	<li>`./discord/`</li>
-	<li>`./Electron/`</li>
-	<li>`./Element/`</li>
-	<li>`./GIMP/`</li>
-	<li>`./go/`</li>
-	<li>`./blockbench/`</li>
-	<li>`./ibus/`</li>
-	<li>`./instaloader/`</li>
-	<li>`./kiwix-desktop/`</li>
-	<li>`./kraxarn/`</li>
-	<li>`./menus/`</li>
-	<li>`./Mousepad/`</li>
-	<li>`./obsidian/`</li>
-	<li>`./procps/`</li>
-	<li>`./qalculate/`</li>
-	<li>`./pulse/`</li>
-	<li>`./Thunar/`</li>
-	<li>`./tsnet-chat-server/`</li>
-	<li>`./unity3d/`</li>
-	<li>`./xfce4/`</li>
-	<li>`./QtProject.conf`</li>
-</div>
+- `./Arduino IDE/`
+- `./arduino-ide/`
+- `./autostart/`
+- `./blender/`
+- `./Blockbench/`
+- `./Code - OSS/`
+- `./dconf/`
+- `./desmos-offline-mode/`
+- `./discord/`
+- `./Electron/`
+- `./Element/`
+- `./GIMP/`
+- `./go/`
+- `./blockbench/`
+- `./ibus/`
+- `./instaloader/`
+- `./kiwix-desktop/`
+- `./kraxarn/`
+- `./menus/`
+- `./Mousepad/`
+- `./obsidian/`
+- `./procps/`
+- `./qalculate/`
+- `./pulse/`
+- `./Thunar/`
+- `./tsnet-chat-server/`
+- `./unity3d/`
+- `./xfce4/`
+- `./QtProject.conf`
