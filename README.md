@@ -16,18 +16,11 @@ Currently, they are:
 
 | HEX Code (Format: `#RRGGBBAA`) | Description |
 |----------|-------------|
-| #112717E6 | Background colour (for Polybar, the format is `#AARRGGBB`) |
-| #AAE8B6 | Text |
-| #4E7B31 | Accent Colour |
-| #BB334CE6 | Warning/Danger |
-| #2E462B | Disabled/subtle |
-
-background = #E6112717
-background-alt = #AAE8B6
-foreground = #AAE8B6
-primary = #4E7B31
-alert = #E6BB334C
-disabled = #2E462B
+| `#112717E6` | Background colour (for Polybar, the format is `#AARRGGBB`) |
+| `#AAE8B6` | Text |
+| `#4E7B31` | Accent Colour |
+| `#BB334CE6` | Warning/Danger |
+| `#2E462B` | Disabled/subtle |
 
 ## Hidden folders
 
