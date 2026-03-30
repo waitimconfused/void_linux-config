@@ -15,6 +15,7 @@ for (( i=1; i<$(echo $WORKSPACES | jq "length" ); i++ )); do
 
 	if (( $current != "$((previous + 1))" )); then
 		new_workspace=$((previous + 1))
+		echo "++ $new_workspace $workspace_error"
 		break;
 	fi
 done
@@ -27,7 +28,7 @@ case $1 in
 			exit 0
 		fi
 
-		if [[ $new_workspace != $workspace_error ]]; then
+		if [ $new_workspace != $workspace_error ]; then
 			echo "Moving window to workspace #$new_workspace"
 			i3-msg move to workspace $new_workspace
 			exit 0
@@ -47,7 +48,7 @@ case $1 in
 			exit 0
 		fi
 
-		if [[ $new_workspace != $workspace_error ]]; then
+		if [ $new_workspace != $workspace_error ]; then
 			echo "Moving view to workspace #$new_workspace"
 			i3-msg workspace $new_workspace
 			exit 0
@@ -67,7 +68,7 @@ case $1 in
 			exit 0
 		fi
 
-		if [[ $new_workspace != $workspace_error ]]; then
+		if [ $new_workspace != $workspace_error ]; then
 			echo "Moving window+view to workspace #$new_workspace"
 			i3-msg move window to workspace $new_workspace, workspace $new_workspace
 			exit 0
@@ -91,7 +92,7 @@ case $1 in
 		if (( $CURRENT_COUNT == "1" )); then
 			echo "  Workspace has one window. Not changing."
 		
-		elif [[ $new_workspace != $workspace_error ]]; then
+		elif [ $new_workspace != $workspace_error ]; then
 			echo "  Moving window to workspace #$new_workspace"
 		else
 			fake_workspace=$(echo $WORKSPACES | jq "max")
@@ -105,7 +106,7 @@ case $1 in
 		if (( $CURRENT_COUNT == "0" )); then
 			echo "  Workspace already empty."
 		
-		elif [[ $new_workspace != $workspace_error ]]; then
+		elif [ $new_workspace != $workspace_error ]; then
 			echo "  Moving view to workspace #$new_workspace"
 		else
 			fake_workspace=$(echo $WORKSPACES | jq "max")
@@ -119,8 +120,8 @@ case $1 in
 		if (( $CURRENT_COUNT == "1" )); then
 			echo "  Workspace has one window. Not changing."
 		
-		elif [[ $new_workspace != $workspace_error ]]; then
-			echo "  Moving window+view to workspace #$fake_workspace"
+		elif [ $new_workspace != $workspace_error ]; then
+			echo "  Moving window+view to workspace #$new_workspace"
 		else
 			fake_workspace=$(echo $WORKSPACES | jq "max")
 			fake_workspace=$((fake_workspace + 1))
