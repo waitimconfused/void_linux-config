@@ -81,7 +81,12 @@ return {
 				filtered_items = {
 					-- visible = true,
 					hide_dotfiles = false,
-					hide_gitignored = false
+					hide_gitignored = true,
+
+					never_show = {
+						".git",
+					},
+
 				},
 				follow_current_file = {
 					enabled = true, -- This will find and focus the file in the active buffer every time
