@@ -1,10 +1,10 @@
 #!/bin/bash
 
-path="$HOME/.config/polybar."
+path="$HOME/.config/polybar/"
 
 # When running script, kill the previous `inotifywait` listener, and continue
 prev_pid=$(ps -ef | grep "inotifywait -e modify $path --recursive" | grep -v "grep" | cut -d " " -f3)
-kill -9 $prev_pid
+kill $prev_pid
 
 launch() {
 	echo "Killing polybars"
