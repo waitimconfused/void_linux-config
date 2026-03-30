@@ -62,6 +62,8 @@ Using the `alt` key is used to control `i3`.
 |-------------------|------------------------------------------------------------------------------------------|
 | volume_up         | Increases the volume by 5%                                                               |
 | volume_down       | Lowers the volume by 5%                                                                  |
+| alt+volume_up     | Skip to next track                                                                       |
+| alt+volume_down   | Go to previous track                                                                     |
 | volume_mute       | Mutes the volume                                                                         |
 | volume_mic_mute   | Mutes the microphone volume                                                              |
 | volume_play_pause | Plays/pauses the current audio                                                           |
@@ -73,8 +75,8 @@ Using the `alt` key is used to control `i3`.
 | alt+tab           | Opens `rofi -show window`                                                                |
 | mod+q             | Closes the current window                                                                |
 | mod+l             | Opens `i3lock` (the lock screen)                                                         |
-| mod+p             | Reloads `autorandr`                                                                      |
-| mod+alt+p         | Toggles night mode                                                                       |
+| `project`         | Reloads `autorandr`                                                                      |
+| alt+`project`     | Toggles night mode                                                                       |
 | print             | Takes a screenshot (saved to `~/Pictures/Screenshots/`) and opens the image in Ristretto |
 | `XF86Calculator`  | Opens `rofi -show calc`                                                                  |
 | mod+f             | Toggles fullscreen for the current window                                                |
@@ -85,17 +87,20 @@ Using the `alt` key is used to control `i3`.
 
 ## `bindsym` Keyboard Lookup
 
-| `bindsym` key           | Human-readable value   |
-|-------------------------|------------------------|
-| `$mod`                  | mod, super, windows    |
-| `$alt`                  | alt                    |
-| `XF86AudioRaiseVolume`  | volume_up              |
-| `XF86AudioLowerVolume`  | volume_down            |
-| `XF86AudioMute`         | volume_mute            |
-| `XF86AudioPlay`         | volume_play_pause      |
-| `XF86AudioMicMute`      | volume_mic_mute        |
-| `XF86MonBrightnessUp`   | brightness_up          |
-| `XF86MonBrightnessDown` | brightness_down        |
-| `XF86PowerOff`          | power                  |
-| `XF86Calculator`        | calculator             |
-| `grave`                 | `` ` ``                |
+Instead of using the actual key name, I've assigned (only in the README file, not in the config files)
+
+| `bindsym` key           | Human-readable value           |
+|-------------------------|--------------------------------|
+| `Mod4`                  | mod (AKA: Super, Windows)      |
+| `Mod1`                  | alt                            |
+| `XF86AudioRaiseVolume`  | volume_up                      |
+| `XF86AudioLowerVolume`  | volume_down                    |
+| `XF86AudioMute`         | volume_mute                    |
+| `XF86AudioPlay`         | volume_play_pause              |
+| `XF86AudioMicMute`      | volume_mic_mute                |
+| `XF86MonBrightnessUp`   | brightness_up                  |
+| `XF86MonBrightnessDown` | brightness_down                |
+| `XF86PowerOff`          | power                          |
+| `XF86Calculator`        | calculator                     |
+| `grave`                 | backtick (`` ` ``)             |
+| `project`               | Project key (alias to `mod+p`) |
