@@ -11,8 +11,8 @@ Using the `shift` key is used to control each window.
 > 
 > Keys with `ctrl` will *also* be shown under [Modifiers/Ctrl](#ctrl).
 
-| Keybind | Description                                                                                                                                           |
-|---|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Keybind              | Description                                                                                                                              |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | mod+shift+Left       | Move the current window left                                                                                                             |
 | mod+shift+Down       | Move the current window down                                                                                                             |
 | mod+shift+Up         | Move the current window up                                                                                                               |
@@ -22,8 +22,10 @@ Using the `shift` key is used to control each window.
 | mod+shift+h          | Set the window split-mode (how to split the current window when launching a new window) to *horizontal*                                  |
 | mod+shift+v          | Set the window split-mode (howa to split the current window when launching a new window) to *vertical*                                   |
 | mod+shift+space      | Toggle floating-mode for the current window. Does not work when a workspace has only one window                                          |
-| mod+shift+(0-9)      | Move the current window to the workspace with the corrisponding number (`0`-`9`)                                                             |
-| mod+ctrl+shift+(0-9) | Move the current window and view to the workspace with the corrisponding number (`0`-`9`)                                                    |
+| mod+shift+(0-9)      | Move the current window to the workspace with the corrisponding number (`0`-`9`)                                                         |
+| mod+shift+grave      | Move the current window to a empty workspace. If the current workspace only has one window, nothing happens                              |
+| mod+shift+ctrl+grave | Move the view and to a empty workspace. If the workspace is empty, nothing happens                                                       |
+| mod+ctrl+shift+(0-9) | Move the current window and view to the workspace with the corrisponding number (`0`-`9`)                                                |
 | mod+shift+r          | Open window-resize mode. Pressing up/down/left/right will change the size of the current window. Press `mod+shift+r` or `escape` to exit |
 
 ### Mod+Ctrl
@@ -35,12 +37,14 @@ Using the `ctrl` key is used to control each workspace.
 
 | Keybind              | Description                                                                               |
 | -------------------- | ----------------------------------------------------------------------------------------- |
+| mod+ctrl+(0-9)       | Move the view to the workspace with the corrisponding number (0-9)                        |
 | mod+ctrl+left        | Move the view to previous workspace (eg: 4 to 3)                                          |
 | mod+ctrl+right       | Move the view to next workspace (eg: 2 to 3)                                              |
+| mod+ctrl+grave       | Move the view to a empty workspace. If the workspace is empty, nothing happens            |
+| mod+ctrl+shift+(0-9) | Move the view and current window to the workspace with the corrisponding number (0-9)     |
 | mod+ctrl+shift+left  | Move the view and current window to the previous workspace                                |
 | mod+ctrl+shift+right | Move the view and current window to the next workspace                                    |
-| mod+ctrl+(0-9)       | Move the view to the workspace with the corrisponding number (0-9)                        |
-| mod+ctrl+shift+(0-9) | Move the view and current window to the workspace with the corrisponding number (0-9)     |
+| mod+ctrl+shift+grave | Move the view and to a empty workspace. If the workspace is empty, nothing happens        |
 | mod+ctrl+space       | Toggle sticky mode for the current window; Window will now stay visible across workspaces |
 
 ## Mod+Alt
@@ -83,7 +87,7 @@ Using the `alt` key is used to control `i3`.
 
 | `bindsym` key           | Human-readable value   |
 |-------------------------|------------------------|
-| `$mod`                  | mod (*windows* button) |
+| `$mod`                  | mod, super, windows    |
 | `$alt`                  | alt                    |
 | `XF86AudioRaiseVolume`  | volume_up              |
 | `XF86AudioLowerVolume`  | volume_down            |
@@ -94,3 +98,4 @@ Using the `alt` key is used to control `i3`.
 | `XF86MonBrightnessDown` | brightness_down        |
 | `XF86PowerOff`          | power                  |
 | `XF86Calculator`        | calculator             |
+| `grave`                 | `` ` ``                |
