@@ -1,19 +1,31 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-echo "Killing polybars"
-pkill polybar
+path="$HOME/.config/polybar."
 
-while pgrep -x polybar >/dev/null; do sleep 1; done
+# When running script, kill the previous `inotifywait` listener, and continue
+prev_pid=$(ps -ef | grep "inotifywait -e modify $path --recursive" | grep -v "grep" | cut -d " " -f3)
+kill -9 $prev_pid
 
-echo "Launching"
+launch() {
+	echo "Killing polybars"
+	pkill polybar
 
-for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-  echo "Launched polybar on monitor $m"
-  MONITOR=$m polybar main -q &
+	while pgrep -x polybar >/dev/null; do sleep 1; done
+
+	echo "Launching"
+
+	for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+		echo "Launched polybar on monitor $m"
+		MONITOR=$m polybar main -q &
+	done
+
+	echo "Bars launched"
+}
+
+launch
+
+# Listen for changes to polybar config files and relaunch
+while inotifywait -e modify $path --recursive; do
+	echo "Detected changes to $HOME/.config/polybar"
+	launch
 done
-
-
-# polybar example 2>&1 | tee -a /tmp/polybar1.log & disown
-# polybar bar2 2>&1 | tee -a /tmp/polybar2.log & disown
-
-echo "Bars launched"
