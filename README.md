@@ -14,7 +14,7 @@ Currently, they are:
 
 ## Colours
 
-| HEX Code | Description |
+| HEX Code (Format: `#RRGGBBAA`) | Description |
 |----------|-------------|
 | #112717E6 | Background colour (for Polybar, the format is `#AARRGGBB`) |
 | #AAE8B6 | Text |
