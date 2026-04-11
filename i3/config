@@ -48,7 +48,7 @@ exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf --vsyn
 exec libinput-gestures-setup start
 exec_always libinput-gestures-setup restart
 
-exec $HOME/.config/i3/script/nightlight.sh off
+exec_always $HOME/.config/i3/script/nightlight.sh
 
 exec --no-startup-id xinput set-prop "DELL0B6B:00 27C6:0D43 Touchpad" "libinput Disable While Typing Enabled" 0
 
