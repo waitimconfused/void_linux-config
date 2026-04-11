@@ -1,7 +1,7 @@
 #!/bin/sh
 
-notify-send -i display "Display profile" "$AUTORANDR_CURRENT_PROFILE"
+notify-send -i display "Display profile" "$AUTORANDR_CURRENT_PROFILE" && \
+	$HOME/.fehbg && \
+	$HOME/.config/polybar/launch.sh && \
+	$HOME/.config/i3/script/nightlight.sh
 
-i3-msg restart
-
-exec $HOME/.config/i3/script/nightlight.sh

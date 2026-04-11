@@ -1,0 +1,41 @@
+gui:
+    theme:
+        activeBorderColor:
+            - "#4E7B31"
+            - bold
+        inactiveBorderColor:
+            - "#2E462B"
+            - bold
+        searchingActiveBorderColor:
+            - cyan
+            - bold
+        optionsTextColor:
+            - blue
+        selectedLineBgColor:
+            - "#4E7B31"
+        inactiveViewSelectedLineBgColor:
+            - "#2E462B"
+        cherryPickedCommitFgColor:
+            - blue
+        cherryPickedCommitBgColor:
+            - cyan
+        markedBaseCommitFgColor:
+            - blue
+        markedBaseCommitBgColor:
+            - yellow
+        unstagedChangesColor:
+            - "#BB334C"
+        defaultFgColor:
+            - "#AAE8B6"
+    border: rounded
+    portraitMode: always
+    spinner:
+        frames:
+            - '|'
+            - /
+            - '-'
+            - \
+        rate: 50
+
+notARepository: skip
+
