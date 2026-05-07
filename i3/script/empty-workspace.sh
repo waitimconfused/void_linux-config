@@ -2,7 +2,7 @@
 
 RAW_WORKSPACES=$(i3-msg -t get_workspaces | jq)
 
-WORKSPACES=$(i3-msg -t get_workspaces | jq "map(.num|tonumber) | [.[] | select(.>=0)]")
+WORKSPACES=$(i3-msg -t get_workspaces | jq "map(.num|tonumber) | [.[] | select(.>=0)] | sort")
 CURRENT=$(echo $RAW_WORKSPACES | jq ".[] | select(.focused==true) | .num")
 CURRENT_COUNT=$(i3-msg -t get_tree | jq --arg ws "$(i3-msg -t get_workspaces | jq -r '.[] | select(.focused).name')" '.. | objects | select(.type=="workspace" and .name==$ws) | [.. | objects | select(.window!=null and .sticky==false)] | length')
 
@@ -28,17 +28,17 @@ case $1 in
 			exit 0
 		fi
 
-		if [ $new_workspace != $workspace_error ]; then
+		if [[ "$new_workspace" != "$workspace_error" ]]; then
 			echo "Moving window to workspace #$new_workspace"
 			i3-msg move to workspace $new_workspace
 			exit 0
 		fi
 		
-		new_workspace=$(echo $WORKSPACES | jq "max")
-		new_workspace=$((new_workspace + 1))
+		new_workspace_last=$(echo $WORKSPACES | jq "max")
+		new_workspace_last=$((new_workspace_last + 1))
 
-		echo "Moving window to workspace #$new_workspace"
-		i3-msg move window to workspace $new_workspace
+		echo "Moving window to workspace #$new_workspace_last"
+		i3-msg move window to workspace $new_workspace_last
 		;;
 
 	"set")
@@ -48,17 +48,17 @@ case $1 in
 			exit 0
 		fi
 
-		if [ $new_workspace != $workspace_error ]; then
+		if [[ "$new_workspace" != "$workspace_error" ]]; then
 			echo "Moving view to workspace #$new_workspace"
 			i3-msg workspace $new_workspace
 			exit 0
 		fi
 
-		new_workspace=$(echo $WORKSPACES | jq "max")
-		new_workspace=$((new_workspace + 1))
+		new_workspace_max=$(echo $WORKSPACES | jq "max")
+		new_workspace_max=$((new_workspace_max + 1))
 
-		echo "Moving view to workspace #$new_workspace"
-		i3-msg workspace $new_workspace
+		echo "Moving view to workspace #$new_workspace_max"
+		i3-msg workspace $new_workspace_max
 		;;
 
 	"both")
@@ -68,17 +68,17 @@ case $1 in
 			exit 0
 		fi
 
-		if [ $new_workspace != $workspace_error ]; then
+		if [[ "$new_workspace" != "$workspace_error" ]]; then
 			echo "Moving window+view to workspace #$new_workspace"
 			i3-msg move window to workspace $new_workspace, workspace $new_workspace
 			exit 0
 		fi
 		
-		new_workspace=$(echo $WORKSPACES | jq "max")
-		new_workspace=$((new_workspace + 1))
+		new_workspace_max=$(echo $WORKSPACES | jq "max")
+		new_workspace_max=$((new_workspace_max + 1))
 
-		echo "Moving window+view to workspace #$new_workspace"
-		i3-msg move window to workspace $new_workspace, workspace $new_workspace
+		echo "Moving window+view to workspace #$new_workspace_max"
+		i3-msg move window to workspace $new_workspace_max, workspace $new_workspace_max
 		;;
 
 	"info")
@@ -86,13 +86,13 @@ case $1 in
 		echo "workspaces = $(echo $WORKSPACES | jq) (length=$(echo $WORKSPACES | jq "length"))"
 		echo "current = $CURRENT"
 		echo "windows = $(i3-msg -t get_tree | jq --arg ws "$(i3-msg -t get_workspaces | jq -r '.[] | select(.focused).name')" '.. | objects | select(.type=="workspace" and .name==$ws) | [.. | objects | select(.window!=null and .sticky==false)] | map(.name)') (length=$CURRENT_COUNT)"
-		echo ""
+		echo "gap = $new_workspace"
 
 		echo "MOVE:"
 		if (( $CURRENT_COUNT == "1" )); then
 			echo "  Workspace has one window. Not changing."
 		
-		elif [ $new_workspace != $workspace_error ]; then
+		elif [[ "$new_workspace" != "$workspace_error" ]]; then
 			echo "  Moving window to workspace #$new_workspace"
 		else
 			fake_workspace=$(echo $WORKSPACES | jq "max")
@@ -106,7 +106,7 @@ case $1 in
 		if (( $CURRENT_COUNT == "0" )); then
 			echo "  Workspace already empty."
 		
-		elif [ $new_workspace != $workspace_error ]; then
+		elif [[ "$new_workspace" != "$workspace_error" ]]; then
 			echo "  Moving view to workspace #$new_workspace"
 		else
 			fake_workspace=$(echo $WORKSPACES | jq "max")
@@ -120,7 +120,7 @@ case $1 in
 		if (( $CURRENT_COUNT == "1" )); then
 			echo "  Workspace has one window. Not changing."
 		
-		elif [ $new_workspace != $workspace_error ]; then
+		elif [[ "$new_workspace" != "$workspace_error" ]]; then
 			echo "  Moving window+view to workspace #$new_workspace"
 		else
 			fake_workspace=$(echo $WORKSPACES | jq "max")

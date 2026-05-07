@@ -1,6 +1,6 @@
 path="$HOME/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png"
 
-scrot --file "$path"
+scrot --select --file "$path"
 
 echo "Saved image to: $path"
 
@@ -8,6 +8,7 @@ return_value=$(
 	notify-send \
 		"Screenshot Saved" \
 		"Image saved to:\n$path" \
+		--icon=$path \
 		--action="open=Open" \
 		--action="copy=Copy Path" \
 		--action="delete=Remove"

@@ -22,6 +22,7 @@ for (( i=0; i<${#uuids[@]}; i++ )); do
 		message="$message %{F#2E462B}|%{F-} "
 	fi
 
+	name=$(bluetoothctl info ${uuids[$i]} | grep -e "Name" | cut -c 8-)
 	battery=$(bluetoothctl info ${uuids[$i]} | grep -e "Battery Percentage" | awk -F'[()]' '{print $2}')
 
 	if [[ $1 = "debug" ]]; then
@@ -67,6 +68,7 @@ for (( i=0; i<${#uuids[@]}; i++ )); do
 	esac
 
 	message="$message%{F-} $battery%"
+	message="$message ($(sed 's/\(.\{6\}\).*/\1.../' <<< $name))"
 
 
 

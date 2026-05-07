@@ -1,0 +1,234 @@
+[
+	{
+		"change": "move",
+		"container": {
+			"id": 93917694957552,
+			"type": "floating_con",
+			"orientation": "horizontal",
+			"scratchpad_state": "fresh",
+			"percent": null,
+			"urgent": false,
+			"marks": [],
+			"focused": false,
+			"output": "__i3",
+			"layout": "splith",
+			"workspace_layout": "default",
+			"last_split_layout": "splith",
+			"border": "pixel",
+			"current_border_width": -1,
+			"rect": {
+				"x": 480,
+				"y": 160,
+				"width": 960,
+				"height": 810
+			},
+			"deco_rect": {
+				"x": 0,
+				"y": 0,
+				"width": 0,
+				"height": 0
+			},
+			"window_rect": {
+				"x": 0,
+				"y": 0,
+				"width": 0,
+				"height": 0
+			},
+			"geometry": {
+				"x": 0,
+				"y": 0,
+				"width": 0,
+				"height": 0
+			},
+			"name": null,
+			"window_icon_padding": -1,
+			"window": null,
+			"window_type": null,
+			"nodes": [
+				{
+					"id": 93917694909040,
+					"type": "con",
+					"orientation": "none",
+					"scratchpad_state": "none",
+					"percent": 1.0,
+					"urgent": false,
+					"marks": [],
+					"focused": false,
+					"output": "__i3",
+					"layout": "splith",
+					"workspace_layout": "default",
+					"last_split_layout": "splith",
+					"border": "none",
+					"current_border_width": 0,
+					"rect": {
+						"x": 480,
+						"y": 160,
+						"width": 960,
+						"height": 810
+					},
+					"deco_rect": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					},
+					"window_rect": {
+						"x": 0,
+						"y": 0,
+						"width": 960,
+						"height": 810
+					},
+					"geometry": {
+						"x": 8,
+						"y": 58,
+						"width": 1904,
+						"height": 1014
+					},
+					"name": "polybar — Code - OSS",
+					"window_icon_padding": -1,
+					"window": 48234500,
+					"window_type": "normal",
+					"window_properties": {
+						"class": "Code - OSS",
+						"instance": "code - oss",
+						"window_role": "browser-window",
+						"machine": "kenneth",
+						"title": "polybar — Code - OSS",
+						"transient_for": null
+					},
+					"nodes": [],
+					"floating_nodes": [],
+					"focus": [],
+					"fullscreen_mode": 0,
+					"sticky": false,
+					"floating": "user_on",
+					"swallows": []
+				}
+			],
+			"floating_nodes": [],
+			"focus": [
+				93917694909040
+			],
+			"fullscreen_mode": 0,
+			"sticky": false,
+			"floating": "auto_off",
+			"swallows": []
+		}
+	},
+	{
+		"change": "move",
+		"container": {
+			"id": 93917694957552,
+			"type": "floating_con",
+			"orientation": "horizontal",
+			"scratchpad_state": "fresh",
+			"percent": null,
+			"urgent": false,
+			"marks": [],
+			"focused": false,
+			"output": "eDP",
+			"layout": "splith",
+			"workspace_layout": "default",
+			"last_split_layout": "splith",
+			"border": "pixel",
+			"current_border_width": -1,
+			"rect": {
+				"x": 480,
+				"y": 160,
+				"width": 960,
+				"height": 810
+			},
+			"deco_rect": {
+				"x": 0,
+				"y": 0,
+				"width": 0,
+				"height": 0
+			},
+			"window_rect": {
+				"x": 0,
+				"y": 0,
+				"width": 0,
+				"height": 0
+			},
+			"geometry": {
+				"x": 0,
+				"y": 0,
+				"width": 0,
+				"height": 0
+			},
+			"name": null,
+			"window_icon_padding": -1,
+			"window": null,
+			"window_type": null,
+			"nodes": [
+				{
+					"id": 93917694909040,
+					"type": "con",
+					"orientation": "none",
+					"scratchpad_state": "none",
+					"percent": 1.0,
+					"urgent": false,
+					"marks": [],
+					"focused": true,
+					"output": "eDP",
+					"layout": "splith",
+					"workspace_layout": "default",
+					"last_split_layout": "splith",
+					"border": "none",
+					"current_border_width": 0,
+					"rect": {
+						"x": 480,
+						"y": 160,
+						"width": 960,
+						"height": 810
+					},
+					"deco_rect": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					},
+					"window_rect": {
+						"x": 0,
+						"y": 0,
+						"width": 960,
+						"height": 810
+					},
+					"geometry": {
+						"x": 8,
+						"y": 58,
+						"width": 1904,
+						"height": 1014
+					},
+					"name": "polybar — Code - OSS",
+					"window_icon_padding": -1,
+					"window": 48234500,
+					"window_type": "normal",
+					"window_properties": {
+						"class": "Code - OSS",
+						"instance": "code - oss",
+						"window_role": "browser-window",
+						"machine": "kenneth",
+						"title": "polybar — Code - OSS",
+						"transient_for": null
+					},
+					"nodes": [],
+					"floating_nodes": [],
+					"focus": [],
+					"fullscreen_mode": 0,
+					"sticky": false,
+					"floating": "user_on",
+					"swallows": []
+				}
+			],
+			"floating_nodes": [],
+			"focus": [
+				93917694909040
+			],
+			"fullscreen_mode": 0,
+			"sticky": false,
+			"floating": "auto_off",
+			"swallows": []
+		}
+	}
+]

@@ -2,6 +2,7 @@
 configuration {
 	show-icons: true;
 	icon-theme: "kora";
+	drun-show-actions: false;
 
 	// display-drun: "Apps ";
 	// display-window: "Windows ";

@@ -1,8 +1,8 @@
 #!/bin/bash
-status="$(playerctl status)"
+status="$(playerctl status --no-messages)"
 
 show() {
-	status="$(playerctl status)"
+	status="$(playerctl status --no-messages)"
 
 	if [ "$status" = "" ]; then
 		echo ""

@@ -3,10 +3,10 @@
 current_state=$(xset q | grep Caps | cut -d " " -f20)
 
 case $1 in
-	on)
+	"on")
 		echo "Turning Num_Lock ON (numbers)."
 		;;
-	off)
+	"off")
 		echo "Turning Num_Lock OFF (arrows)."
 		;;
 	*)

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. $HOME/.config/i3/script/numlock.sh on
+
 i3lock -t \
 	-i $HOME/Wallpapers/lock/Townscaper-Island.png \
 	--clock \
@@ -15,6 +17,11 @@ monitors=$(xrandr | grep " connected " | awk '{ print $1 }')
 monitors=($monitors)
 
 monitor_count=${#monitors[@]}
+
+if [[ $1 == "--no-suspend" ]]; then
+	echo "Caught --no-suspend; Not suspending screen"
+	exit 0
+fi
 
 if [[ $monitor_count = 1 ]]; then
 	xset dpms force suspend
