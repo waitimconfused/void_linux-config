@@ -45,4 +45,10 @@ while true; do
 	sleep_pid=$!
 	wait
 
+	# file_status=$(tailscale file get --verbose ~/Downloads)
+
+	# if [[ $file_status != "moved 0/0 files" ]]; then
+	# 	notify-send "Received file!"
+	# fi
+
 done

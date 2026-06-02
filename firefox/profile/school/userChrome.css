@@ -1,0 +1,199 @@
+:root {
+	--custom-background: #271111e6;
+	--custom-foreground: #e8aaaa;
+	--custom-primary: #7b3131;
+	--custom-alert: #bb33a4e6;
+	--custom-disabled: #462b2b;
+	--custom-font: monospace;
+}
+
+#main-window {
+	-moz-appearance: none;
+	background: transparent !important;
+}
+
+body {
+	background-color: transparent !important;
+}
+
+#navigator-toolbox {
+	/* background-color: var(--custom-background) !important; */
+	background: transparent;
+	border: none !important;
+}
+
+
+#nav-bar {
+	border-top: none !important;
+}
+
+#nav-bar,
+#PersonalToolbar {
+	background-color: var(--custom-disabled) !important;
+	color: var(--custom-foreground) !important;
+	font-family: var(--custom-font) !important;
+}
+
+#PersonalToolbar {
+	visibility: visible !important;;
+}
+
+.toolbar-items {
+	padding: 0 2px;
+	background-color: var(--custom-background) !important;
+}
+
+
+.tab-content {
+	font-family: var(--custom-font) !important;
+}
+.tab-content:not([selected]) {
+	color: var(--custom-foreground) !important;
+}
+
+#tabbrowser-tabs[closebuttons="activetab"][orient="horizontal"] {
+	tab:not([pinned]):not([selected]):not(:has(+tab[selected])):not(:hover) {
+		.tab-content::after {
+			content: "|";
+			color: var(--custom-primary) !important;
+		}
+	}
+}
+
+tab:hover {
+	.tab-close-button {
+		display: block !important;
+	}
+}
+
+tab[multiselected] .tab-background {
+	background: var(--custom-disabled) !important;
+	outline-color: var(--custom-primary) !important;
+	outline-width: 1px !important;
+}
+
+
+.tab-background[selected] {
+	border-radius: 6px !important;
+	background-color: var(--custom-primary) !important;
+	box-shadow: none !important;
+	outline: none !important;
+}
+tab[multiselected] .tab-background[selected] {
+  background-color: color-mix( in srgb, var(--custom-primary) 50%, var(--custom-disabled) 50% ) !important;
+}
+
+.tab-content[selected] {
+	color: var(--custom-background) !important;
+	font-weight: bold !important;
+}
+
+
+.urlbar-background {
+	background-color: var(--custom-foreground) !important;
+}
+
+.urlbar-input-container {
+	color: var(--custom-background) !important;
+	font-family: var(--custom-font) !important;
+}
+
+.titlebar-buttonbox-container {
+	display: none !important;
+}
+
+.tabbrowser-tab:hover .tab-background:not([selected]) {
+	background-color: var(--custom-disabled) !important;
+}
+
+#navigator-toolbox {
+	animation: none !important;
+	transition: margin-top 100ms ease-out !important;
+}
+
+#navigator-toolbox:hover,
+#navigator-toolbox:focus {
+	margin-top: 0px !important;
+}
+
+.urlbarView {
+	color: var(--custom-primary) !important;
+}
+
+.urlbarView-row[selected] {
+	background-color: var(--custom-primary) !important;
+}
+
+.urlbarView-row[label]::before {
+	font-family: inherit !important;
+	color: inherit !important;
+}
+
+.tab-icon-image {
+	filter: sepia() hue-rotate(310deg) saturate(5);
+}
+
+
+/* FLOATING (style = all) */
+
+/* html:not([inFullscreen]) #navigator-toolbox {
+	margin-bottom: 8px;
+	border-radius: 8px;
+	overflow: hidden;
+}
+html:not([inFullscreen]) #browser {
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+html:not([inFullscreen]) #nav-bar {
+	border-radius: 8px 8px 0 0;
+}
+
+html:not([inFullscreen]) .toolbar-items {
+	margin-bottom: 8px;
+	border-radius: 8px;
+} */
+
+/* FLOATING (style = together) */
+
+html:not([inFullscreen]) #navigator-toolbox {
+	margin-bottom: 8px;
+	border-radius: 8px;
+	overflow: hidden;
+}
+html:not([inFullscreen]) #browser {
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+/* FLOATING (style = tabs) */
+
+/* html:not([inFullscreen]) #nav-bar {
+	border-radius: 8px 8px 0 0;
+}
+
+html:not([inFullscreen]) .toolbar-items {
+	margin-bottom: 8px;
+	border-radius: 8px;
+} */
+
+/* FLOATING (style = browser-content) */
+
+/* splitter {
+  transform: translate(4px, 0);
+}
+
+html:not([inFullscreen]) #browser,
+html:not([inFullscreen]) browser,
+html:not([inFullscreen]) .browserContainer {
+	background: transparent !important;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+html:not([inFullscreen]) .browserSidebarContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+} */

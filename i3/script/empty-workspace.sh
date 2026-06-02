@@ -9,21 +9,21 @@ CURRENT_COUNT=$(i3-msg -t get_tree | jq --arg ws "$(i3-msg -t get_workspaces | j
 workspace_error="?"
 new_workspace=$workspace_error
 
-for (( i=1; i<$(echo $WORKSPACES | jq "length" ); i++ )); do
-	previous="$(echo $WORKSPACES | jq ".[$((i - 1))]")"
-	current=$(echo $WORKSPACES | jq ".[$i]")
+for (( i=1; i<$(echo $WORKSPACES | jq "last | .+1" ); i++ )); do
+	
+	workspace_exists=$( echo $WORKSPACES | jq "if index($i)==null then false else true end" )
 
-	if (( $current != "$((previous + 1))" )); then
-		new_workspace=$((previous + 1))
-		echo "++ $new_workspace $workspace_error"
-		break;
+	if [[ $workspace_exists == "false" ]]; then
+		new_workspace=$i
+		break
 	fi
+
 done
 
 case $1 in
 	"move")
 	
-		if (( $CURRENT_COUNT == "1" )); then
+		if [[ $CURRENT_COUNT == "1" ]]; then
 			echo "Workspace has one window."
 			exit 0
 		fi
@@ -43,7 +43,7 @@ case $1 in
 
 	"set")
 
-		if (( $CURRENT_COUNT == "0" )); then
+		if [[ $CURRENT_COUNT == "0" ]]; then
 			echo "Workspace already empty."
 			exit 0
 		fi
@@ -62,8 +62,10 @@ case $1 in
 		;;
 
 	"both")
-	
-		if (( $CURRENT_COUNT == "1" )); then
+		if [[ $CURRENT_COUNT == "0" ]]; then
+			echo "Workspace is empty."
+			exit 0
+		elif [[ $CURRENT_COUNT == "1" ]]; then
 			echo "Workspace has one window."
 			exit 0
 		fi
@@ -89,7 +91,7 @@ case $1 in
 		echo "gap = $new_workspace"
 
 		echo "MOVE:"
-		if (( $CURRENT_COUNT == "1" )); then
+		if [[ $CURRENT_COUNT == "1" ]]; then
 			echo "  Workspace has one window. Not changing."
 		
 		elif [[ "$new_workspace" != "$workspace_error" ]]; then
@@ -103,7 +105,7 @@ case $1 in
 		fi
 
 		echo "SET:"
-		if (( $CURRENT_COUNT == "0" )); then
+		if [[ $CURRENT_COUNT == "0" ]]; then
 			echo "  Workspace already empty."
 		
 		elif [[ "$new_workspace" != "$workspace_error" ]]; then
@@ -117,7 +119,10 @@ case $1 in
 		fi
 
 		echo "BOTH:"
-		if (( $CURRENT_COUNT == "1" )); then
+		if [[ $CURRENT_COUNT == "0" ]]; then
+			echo "  Workspace is empty. Not changing."
+
+		elif [[ $CURRENT_COUNT == "1" ]]; then
 			echo "  Workspace has one window. Not changing."
 		
 		elif [[ "$new_workspace" != "$workspace_error" ]]; then

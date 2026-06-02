@@ -1,13 +1,14 @@
 path="$HOME/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png"
 
-scrot --select --file "$path"
+scrot --select --file "$path" -e 'xclip -selection clipboard -t image/png -i $f'
 
 echo "Saved image to: $path"
+echo "Copied image to xclip"
 
 return_value=$(
 	notify-send \
 		"Screenshot Saved" \
-		"Image saved to:\n$path" \
+		"Image saved to:$path\n(Copied to clipboard)" \
 		--icon=$path \
 		--action="open=Open" \
 		--action="copy=Copy Path" \

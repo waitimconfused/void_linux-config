@@ -6,6 +6,12 @@ dynamic_padding = false
 opacity = 0.9
 blur=true
 
+[terminal]
+shell = {
+	program = "/bin/zsh",
+	args = [ "-c", "fastfetch --logo none --structure DateTime:Uptime && exec zsh" ]
+}
+
 [font]
 normal = { family="JetBrains Mono", style="Regular" }
 size = 8

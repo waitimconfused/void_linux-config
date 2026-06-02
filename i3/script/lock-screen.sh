@@ -13,18 +13,3 @@ i3lock -t \
 	--time-size=60 \
 	--date-str=""
 
-monitors=$(xrandr | grep " connected " | awk '{ print $1 }')
-monitors=($monitors)
-
-monitor_count=${#monitors[@]}
-
-if [[ $1 == "--no-suspend" ]]; then
-	echo "Caught --no-suspend; Not suspending screen"
-	exit 0
-fi
-
-if [[ $monitor_count = 1 ]]; then
-	xset dpms force suspend
-else
-	echo "Only one monitor"
-fi

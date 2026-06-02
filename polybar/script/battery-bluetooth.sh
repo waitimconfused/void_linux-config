@@ -15,7 +15,6 @@ if [[ $1 = "debug" ]]; then
 	echo ""
 fi
 
-message=""
 for (( i=0; i<${#uuids[@]}; i++ )); do
 
 	if (( $i > 0 )); then
