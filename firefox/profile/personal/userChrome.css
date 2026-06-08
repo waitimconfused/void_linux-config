@@ -38,9 +38,13 @@ body {
 	visibility: visible !important;;
 }
 
-.toolbar-items {
+#TabsToolbar {
 	padding: 0 2px;
 	background-color: var(--custom-background) !important;
+}
+
+#tabbrowser-tabs {
+  padding: 0px 2px;
 }
 
 

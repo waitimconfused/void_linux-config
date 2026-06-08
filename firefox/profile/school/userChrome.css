@@ -38,9 +38,13 @@ body {
 	visibility: visible !important;;
 }
 
-.toolbar-items {
+#TabsToolbar {
 	padding: 0 2px;
 	background-color: var(--custom-background) !important;
+}
+
+#tabbrowser-tabs {
+  padding: 0px 2px;
 }
 
 
@@ -128,11 +132,6 @@ tab[multiselected] .tab-background[selected] {
 	font-family: inherit !important;
 	color: inherit !important;
 }
-
-.tab-icon-image {
-	filter: sepia() hue-rotate(310deg) saturate(5);
-}
-
 
 /* FLOATING (style = all) */
 

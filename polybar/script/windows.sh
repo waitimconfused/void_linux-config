@@ -16,12 +16,13 @@ reload() {
 			' .. | objects
 			| select(.type=="workspace" and .name==$ws)
 			| [.. | objects | select(.window!=null and .sticky==false)]
+
 			| if ( . | length ) == 1
 				then " "+truncate(.[0].name;30)+" "
 				else map(
 					if (.focused == true)
-						then "%{u#2E462B}%{+u} "+truncate(.name;20)+" %{-u}"
-						else " "+truncate(.name;20)+" "
+						then "%{A:i3-msg \"[id="+(.window|tostring)+"] focus\":}%{u#2E462B}%{+u} "+truncate(.name;20)+" %{-u}%{A}"
+						else "%{A:i3-msg \"[id="+(.window|tostring)+"] focus\":} "+truncate(.name;20)+" %{A}"
 					end
 				) | join(" ")
 			end'
@@ -34,9 +35,17 @@ reload() {
 			| [
 				.. | objects
 				| select(.window != null)
-				| .name
 			]
-			| map("%{F#4E7B31}󰛑%{F-} " + (.[0:15]) )
+
+			| map(
+				if (.window_properties.class == "Alacritty") then .name = ""
+				elif (.window_properties.class == "Firefox") then .name = "󰈹"
+				elif (.window_properties.class == "Code - OSS") then .name = ""
+				elif (.window_properties.class == "discord") then .name = ""
+				end
+			)
+			
+			| map("%{F#4E7B31} " + (.name[0:15]) + "%{F-}" )
 			| join(" ")'
 	)
 

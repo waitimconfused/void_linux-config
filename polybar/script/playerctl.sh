@@ -21,7 +21,13 @@ show() {
 
 	playbutton="$playbutton%{A}"
 
-	info="%{A:kill -USR1 $$:}"
+	title=$(playerctl metadata title)
+	info=""
+	if [[ $title != "" ]]; then
+		title="$( jq --raw-output "truncate(.;20)" <<< "\"$title\"" )";
+		info="($title)"
+	fi
+
 
 	icon="%{F#4E7B31}󰎇%{F-}"
 	echo "$icon %{A:playerctl previous & $reload:}󰒮%{A} $playbutton %{A:playerctl next & $reload:}󰒭%{A} $info"
