@@ -33,5 +33,6 @@
 		"unity3d/": true,
 		"xfce4/": true,
 		"QtProject.conf": true
-	}
+	},
+	"git.postCommitCommand": "sync"
 }
