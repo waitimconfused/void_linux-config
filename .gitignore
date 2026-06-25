@@ -27,6 +27,7 @@ procps/
 qalculate/
 pulse/
 polybar/github.token
+polybar/cache
 StardewValley/
 tailscale/ssh_known_hosts
 Thunar/
