@@ -7,7 +7,7 @@ reload() {
 		exit 0
 	fi
 
-	current_workspace=$(i3-msg -t get_workspaces | jq -r ".[] | select(.output==\"$MONITOR\" and .visible)".name)
+	current_workspace=$(i3-msg -t get_workspaces | jq -r ".[] | select(.output==\"$MONITOR\" and .visible).name")
 
 	windows=$(
 		i3-msg -t get_tree |

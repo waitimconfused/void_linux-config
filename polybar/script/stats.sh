@@ -1,12 +1,40 @@
-#!/bin/sh
+#!/bin/bash
+
+FILE="./.config/polybar/script/cache/stats"
+
+if [ ! -f "$FILE" ]; then
+	echo "cpu" > $FILE
+fi
 
 t=0
-sleep_pid=0
 
+case "$(< $FILE)" in
+	"cpu")
+		t=0
+		;;
+	"ram")
+		t=1
+		;;
+	*)
+		echo "Unknown custom/stats state: \"$(< $FILE)\". Expected \"cpu\" or \"ram\"."
+		exit
+esac
+
+sleep_pid=0
 colour="%{F#4E7B31}"
 
-toggle() {
+click() {
 	t=$(((t + 1) % 2))
+
+	echo $t > $FILE
+
+	if [ $t -eq 0 ]; then
+		echo "${colour}%{F-} XX%"
+		echo "cpu" > $FILE
+	else
+		echo "${colour}%{F-} XX%"
+		echo "ram" > $FILE
+	fi
 
 	show
 
@@ -15,7 +43,7 @@ toggle() {
 	fi
 }
 
-trap "toggle" USR1
+trap "click" USR1
 
 show() {
 	if [ $t -eq 0 ]; then

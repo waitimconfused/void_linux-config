@@ -9,9 +9,7 @@ show() {
 		exit 0
 	fi
 
-	reload="kill -USR1 $$"
-
-	playbutton="%{A:playerctl play-pause & $reload:}"
+	playbutton="%{A:playerctl play-pause:}"
 
 	if [ "$status" = "Paused" ]; then
 		playbutton="$playbutton"
@@ -30,17 +28,18 @@ show() {
 
 
 	icon="%{F#4E7B31}󰎇%{F-}"
-	echo "$icon %{A:playerctl previous & $reload:}󰒮%{A} $playbutton %{A:playerctl next & $reload:}󰒭%{A} $info"
+	echo "$icon %{A:playerctl previous:}󰒮%{A} $playbutton %{A:playerctl next:}󰒭%{A} $info"
 
 }
 
-trap "show" USR1
+show
 
-while true; do
-	message="$(show)"
-	echo $message
+playerctl status --follow \
+| while read -r player status; do
+    show
+done
 
-	sleep 1 &
-	sleep_pid=$!
-	wait
+playerctl metadata --follow \
+| while read -r player status; do
+    show
 done

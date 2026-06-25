@@ -1,5 +1,12 @@
 #!/bin/bash
 
+is_locked=$(ps -ef | grep -v grep | grep i3lock)
+
+if [[ $is_locked != "" ]]; then
+	echo "Device is already locked"
+	exit 0
+fi
+
 . $HOME/.config/i3/script/numlock.sh on
 
 i3lock \

@@ -55,7 +55,7 @@ exec_always $HOME/.config/i3/script/nightlight.sh
 exec --no-startup-id xinput set-prop "DELL0B6B:00 27C6:0D43 Touchpad" "libinput Disable While Typing Enabled" 0
 
 # bindsym $mod+$alt+i exec --no-startup-id $HOME/.local/share/applications/autoclicker.sh
-bindsym --release $mod+$alt+c exec "[ $(notify-send 'Reloaded i3WM'  'Triggered by mod+alt+c' --icon=i3wm --action='nvim'='Open config in NeoVim') ] && alacritty msg create-window --working-directory '.config/i3' --command 'nvim'", exec "polybar-msg cmd restart", reload
+bindsym --release $mod+$alt+c exec "[ $(notify-send 'Reloaded i3WM'  'Triggered by mod+alt+c' --icon=i3wm --action='nvim'='Open config in NeoVim') ] && alacritty msg create-window --working-directory '.config/i3' --command 'nvim'", exec "$HOME/.config/polybar/launch.sh", reload
 bindsym --release $mod+$alt+r exec "[ $(notify-send 'Restarted i3WM' 'Triggered by mod+alt+r' --icon=i3wm --action='nvim'='Open config in NeoVim') ] && alacritty msg create-window --working-directory '.config/i3' --command 'nvim'", restart
 bindsym --release $mod+$alt+XF86PowerOff mode "quit"; exec polybar i3exit
 

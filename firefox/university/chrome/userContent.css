@@ -1,0 +1,62 @@
+@-moz-document domain("ecosia.org") {
+	.search-navigation__bar-item[data-test-id=search-navigation-item-chat] {
+		display: none !important;
+	}
+
+	/* Remove AI suggestions in the search box */
+	#search-form-ai-suggestion {
+		display: none !important;
+	}
+
+	/* Remove the "Download App" button*/
+	.main-header__install-cta {
+		display: none !important;
+	}
+
+	/* Disable the searchbar shrinking after scrolling */
+	.main-header__navigation {
+		padding-bottom: 0px !important;
+	}
+	.main-header__search-navigation {
+		height: unset !important;
+		overflow: visible !important;
+		opacity: 1 !important;
+		margin: 0.5rem 0 !important;
+	}
+
+}
+
+@-moz-document url(about:newtab), url(about:home) {
+	.personalizeButtonWrapper {
+		display: none !important;
+	}
+}
+
+@-moz-document domain("youtube.com") {
+
+	/* Remove "Ask AI" from video description */
+	.ytVideoDescriptionYouchatSectionViewModelHost {
+		display: none !important;
+	}
+
+	/* Remove the "Ask" button next to like/dislike/save/etc */
+	.you-chat-entrypoint-button {
+		display: none !important;
+	}
+
+	#flexible-item-buttons > .ytd-menu-renderer {
+		margin-left: 4px !important;
+	}
+}
+
+@-moz-document domain("spotify.com") {
+
+	button[aria-label="Download"] {
+		display: none !important;
+	}
+
+	a[href="/download"] {
+		display: none !important;
+	}
+
+}

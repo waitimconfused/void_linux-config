@@ -41,6 +41,7 @@ application/x-zerosize=code-oss.desktop;
 image/vnd.microsoft.icon=org.xfce.ristretto.desktop;gimp.desktop;feh.desktop;
 application/x-xz-compressed-tar=userapp-unzip-CAU3K3.desktop;
 image/gif=org.xfce.ristretto.desktop;feh.desktop;gimp.desktop;
+text/css=code-oss.desktop;
 
 [Removed Associations]
 application/zip=userapp-}"-NI1QK3.desktop;userapp-unzip-CAU3K3.desktop;
