@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE="./.config/polybar/script/cache/stats"
+FILE="$HOME/.config/polybar/script/cache/stats"
 
 if [ ! -f "$FILE" ]; then
 	echo "cpu" > $FILE

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE="./.config/polybar/script/cache/dpms"
+FILE="$HOME/.config/polybar/script/cache/dpms"
 
 if [ ! -f "$FILE" ]; then
 	echo "sleep" > $FILE
