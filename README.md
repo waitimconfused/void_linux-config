@@ -1,4 +1,4 @@
-# voidlinux-config
+# void_linux-config
 
 All configuration files for my Void Linux setup
 
@@ -8,7 +8,7 @@ All fonts are more or less monospace.
 
 Currently, they are:
 
-- **Symbols Nerd Font**: For "geeky" symbols like the characters used in Polybar, Rofi, and Nvim
+- **Symbols Nerd Font**: For "geeky" symbols like the characters used in Waybar, Rofi, and Alacritty
 - **JetBrains Mono**: Just for a basic monospace font
 - **Noto Emoji**: I don't think I'm using this one, but it's there for the ability to put emojis in more locations
 
