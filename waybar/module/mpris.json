@@ -1,0 +1,22 @@
+{
+		"mpris": {
+				"format": "<span foreground='#4E7B31' size='large'>{status_icon}</span> {title}",
+				"tooltip-format": "MPRIS\n\n{dynamic}\n{position} / {length}\n\n{status} on {player} {player_icon}",
+
+				"dynamic-separator": "\n",
+				"interval": 1,
+				"max-length": 20,
+				"truncate-hours": true,
+				"ellipsis": "...",
+				"status-icons": {
+						"playing": "<span foreground='#4E7B31' size='large'>󰎇</span>",
+						"paused": "<span foreground='#4E7B31' size='large'>󰎊</span>"
+				},
+				"player-icons": {
+						"spotify": "",
+						"firefox": "󰈹",
+						"vlc": "󰕼"
+				},
+				"dynamic-order": ["title", "artist", "album"]
+		}
+}

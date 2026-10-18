@@ -1,0 +1,20 @@
+{
+	"custom/swaync": {
+		"tooltip": true,     
+		"format": "<span foreground='#4E7B31' size='large'>{icon}</span> {text}",
+		"format-icons": {
+			"notification": "",
+			"none": "",
+			"dnd-notification": "",
+			"dnd-none": "",
+			"inhibited-notification": "",
+			"inhibited-none": "",
+			"dnd-inhibited-notification": "",
+			"dnd-inhibited-none": ""
+		},
+		"return-type": "json",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client --toggle-panel",
+		"restart-interval": 3
+	}
+}

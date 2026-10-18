@@ -1,0 +1,8 @@
+{
+	"niri/window": {
+		"format": "{title}",
+		"show-empty": false,
+		"separate-outputs": true,
+		"expand": true
+	}
+}

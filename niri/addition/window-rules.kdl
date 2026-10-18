@@ -1,0 +1,94 @@
+window-rule {
+	geometry-corner-radius 8
+	draw-border-with-background false
+	tiled-state true
+	open-maximized-to-edges false
+	open-focused true
+
+	background-effect {
+		xray false
+		blur true
+	}
+
+	shadow {
+		off
+		softness 8
+		spread 0
+		offset x=0 y=2
+		draw-behind-window true
+		color "#00000064"
+	}
+
+	min-width 64
+	min-height 64
+
+		// default-floating-position x=0 y=0 relative-to="bottom-left"
+}
+
+window-rule {
+	match is-window-cast-target=true
+	border {
+		on
+		width 2
+		active-color "#BB334C"
+		inactive-color "#BB334C"
+		urgent-color "#BB334C"
+	}
+}
+
+window-rule {
+	match app-id="steam" title=r#"^notification.*$"#
+	default-floating-position x=16 y=16 relative-to="bottom-right"
+}
+
+window-rule {
+	match app-id="firefox"
+
+	popups {
+		geometry-corner-radius 6
+		opacity 0.9
+		background-effect {
+			blur true
+		}
+	}
+}
+
+window-rule {
+		match app-id="firefox" title="Picture-in-Picture"
+		open-floating true
+		open-focused false
+		default-floating-position x=16 y=16 relative-to="bottom-right"
+}
+
+window-rule {
+		match app-id="org.prismlauncher.PrismLauncher" title=r#"^Console window for .* Prism Launcher.*$"#
+		match app-id="org.prismlauncher.PrismLauncher" title=r#"^Download mods .* Prism Launcher.*$"#
+		open-floating true
+}
+
+window-rule {
+	match is-floating=true
+	shadow {
+		on
+	}
+}
+
+window-rule {
+	match title=r#"^Minecraft.*$"#
+	match app-id="com.mojang.minecraft"
+	open-fullscreen true
+	variable-refresh-rate true
+}
+
+// Example: block out two password managers from screen capture.
+// (This example rule is commented out with a "/-" in front.)
+window-rule {
+	match app-id=r#"keepassxc"#
+	match app-id=r#"^*Secrets*$"#
+
+	block-out-from "screen-capture"
+}
+window-rule {
+	geometry-corner-radius 8
+	clip-to-geometry true
+}

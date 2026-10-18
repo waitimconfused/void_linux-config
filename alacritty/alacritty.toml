@@ -1,0 +1,16 @@
+[general]
+import = [
+	"addition/terminal.toml",
+	"addition/window.toml",
+	"addition/colors.toml",
+	"addition/cursor.toml",
+	"addition/font.toml",
+	"addition/keyboard.toml"
+]
+
+working_directory = "~/"
+live_config_reload = true
+ipc_socket = true
+
+[scrolling]
+multiplier=1

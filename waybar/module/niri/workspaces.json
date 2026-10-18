@@ -1,0 +1,15 @@
+{
+	"niri/workspaces": {
+		"format": "{value}",
+		"on-click": "activate",
+		"display-condition": "only-populated",
+		"hide-empty": true,
+		"enable": true,
+		"sort-by-name": true,
+		"workspace-taskbar": {
+			"enable": true,
+			"icon-size": 18
+		},
+		"enable-bar-scroll": true
+	}
+}

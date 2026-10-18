@@ -1,0 +1,17 @@
+{
+	"battery": {
+		"bat": "BAT1",
+		"adapter": "ACAD",
+		"interval": 5,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "<span foreground='#4E7B31' size='large'>{icon}</span> {capacity}%",
+		"format-charging": "<span foreground='#4E7B31' size='large'>󱐋 {icon}</span> {capacity}%",
+		"format-full": "<span foreground='#4E7B31' size='large'>󱁖  {icon}</span> {capacity}%",
+		"format-warning": "<span foreground='#BB334C' size='large'> </span> <span foreground='#4E7B31' size='large'>{icon}</span> {capacity}%",
+		"format-critical": "<span foreground='#BB334C' size='large'> </span> <span foreground='#4E7B31' size='large'>{icon}</span> {capacity}%",
+		"format-icons": [ " ", " ", " ", " ", " " ]
+	}
+}

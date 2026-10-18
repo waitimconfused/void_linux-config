@@ -1,0 +1,16 @@
+{
+	"network": {
+		// "interface": "wlp2s0",
+		"format": "<span foreground='#4E7B31' size='large'>{icon}</span>",
+		"format-wifi": "<span foreground='#4E7B31' size='large'>{icon}</span> {essid}",
+		"format-ethernet": "<span foreground='#4E7B31' size='large'>{icon}</span> {ipaddr}",
+		"format-disconnected": "<span foreground='#4E7B31' size='large'>󰤮 </span> none",
+		"format-icons": [ "󰤯", "󰤟", "󰤢", "󰤨" ],
+		"on-click": "gtk-launch nmtui",
+		"tooltip-format": "{ifname}",
+		"tooltip-format-wifi": "WIFI\n\nESSID: {essid}\nStrength: {signalStrength}%\nInterface: {ifname}\nIPv4: {ipaddr}\n---\n{bandwidthUpBits}  {bandwidthDownBits}",
+		"tooltip-format-ethernet": "ETHERNET\n\nInterface: {ifname}\nIPv4: {ipaddr}\n---\n{bandwidthUpBits}  {bandwidthDownBits}",
+		"tooltip-format-disconnected": "Disconnected",
+		"max-length": 50
+	}
+}

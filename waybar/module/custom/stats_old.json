@@ -1,0 +1,9 @@
+{
+	"custom/stats": {
+		"exec": "~/.config/waybar/script/stats.sh",
+		"return-type": "raw",
+		"signal": 1,
+		"restart-interval": 5,
+		"on-click": "pkill -USR1 -f 'stats.sh'"
+	}
+}

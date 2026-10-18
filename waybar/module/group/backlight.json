@@ -1,0 +1,14 @@
+{
+	"group/backlight": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 500,
+			"children-class": "drawer-child",
+			"transition-left-to-right": false
+		},
+		"modules": [
+			"backlight",
+			"custom/sunsetr"
+		]
+	}
+}

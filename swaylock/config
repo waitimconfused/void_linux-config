@@ -1,0 +1,61 @@
+image=~/Wallpapers/lock/Townscaper-Island.png
+scaling=fill
+
+font=JetBrains Mono
+font-size=30
+
+# Set the indicator sizes
+indicator-radius=100
+indicator-thickness=10
+
+# Sets the color of the inside of the indicator
+inside-color=112717E6
+inside-clear-color=112717E6
+inside-caps-lock-color=112717E6
+inside-ver-color=112717E6
+inside-wrong-color=112717E6
+
+# Sets the color of the ring of the indicator
+ring-color=112717E6
+ring-clear-color=112717E6
+ring-caps-lock-color=112717E6
+ring-ver-color=112717E6
+ring-wrong-color=112717E6
+
+# Sets the color of the line between the inside and ring
+line-color=112717
+line-clear-color=112717
+line-caps-lock-color=112717
+line-ver-color=112717
+line-wrong-color=112717
+
+# Sets the colour of the key highlight segments
+key-hl-color=4E7B31
+bs-hl-color=2E462B
+caps-lock-key-hl-color=4E7B31
+caps-lock-bs-hl-color=2E462B
+
+# Sets the color of the text
+text-color=AAE8B6
+text-clear-color=AAE8B6
+text-caps-lock-color=AAE8B6
+text-ver-color=4E7B31
+text-wrong-color=BB334C
+
+# Sets the color of the lines that separate highlight segments
+separator-color=112717
+
+# Sets the background color of the box containing the layout text
+layout-bg-color=112717E6
+
+# Sets the color of the border of the box containing the layout text
+layout-border-color=112717
+
+# Sets the color of the layout text
+layout-text-color=AAE8B6
+
+# Flags
+ignore-empty-password
+show-failed-attempts
+indicator-caps-lock
+show-keyboard-layout

@@ -1,0 +1,14 @@
+{
+	"custom/system": {
+		"format" : "<span foreground='#4E7B31' size='large'></span>",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "~/.config/waybar/module/custom/system.xml",
+		"menu-actions": {
+			"shutdown": "loginctl poweroff",
+			"reboot": "loginctl reboot",
+			"suspend": "loginctl suspend",
+			"hibernate": "loginctl hibernate"
+		}
+	}
+}

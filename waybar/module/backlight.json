@@ -1,0 +1,10 @@
+{
+	"backlight": {
+		"device": "intel_backlight",
+		"format": "<span foreground='#4E7B31' size='large'>{icon}</span> {percent}%",
+		"format-icons": [ "󱩎", "󱩏", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨" ],
+		"tooltip-format": "BACKLIGHT\n\nBrightness: {percent}%",
+		"scroll-step": 5,
+		"smooth-scrolling-threshold": 2
+	}
+}

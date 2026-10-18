@@ -1,0 +1,47 @@
+{
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+	"logo": {
+		"type": "auto", // Logo type: auto, builtin, small, file, etc.
+		"source": "void_small", // Built-in logo name or file path
+		"width": 11, // Width in characters
+		"height": 7, // Height in characters
+		"padding": {
+			"top": 0, // Top padding
+			"left": 0, // Left padding
+			"right": 3 // Right padding
+		},
+		"color": { // Override logo colors
+			"1": "green",
+			"2": "green"
+		}
+	},
+	"modules": [
+		"title",
+		"separator",
+		"datetime",
+		"uptime",
+		"separator",
+		"memory",
+		"swap",
+		"disk"
+	],
+	"display": {
+		"separator": " → ",
+		"hideCursor": true,
+		"bar": {
+			"width": 10, // Width of percentage bars
+			"char": {
+				"elapsed": "🬋", // Character for elapsed portion
+				"total": "─" // Character for total portion
+			}
+		},
+		"percent": {
+			"type": 3,
+			"ndigits": 3
+		},
+		"color": {
+			"keys": "light_green", // Key color
+			"title": "green" // Title color
+		}
+	}
+}

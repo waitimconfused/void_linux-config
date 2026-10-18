@@ -1,0 +1,65 @@
+layer-rule {
+		shadow {
+				off
+				softness 8
+				spread 0
+				offset x=0 y=2
+				draw-behind-window true
+				color "#00000064"
+		}
+}
+
+layer-rule {
+		match layer="top"
+		match layer="overlay"
+
+		geometry-corner-radius 8
+		background-effect {
+				xray false
+				blur true
+		}
+}
+
+layer-rule {
+		match layer="background"
+		place-within-backdrop true
+}
+
+layer-rule {
+		match layer="overlay"
+}
+
+layer-rule {
+		match namespace="^waybar$"
+
+		popups {
+				geometry-corner-radius 8
+				background-effect {
+						blur true
+				}
+		}
+}
+
+layer-rule {
+		match namespace=r#"swaync"#
+		block-out-from "screencast"
+
+		background-effect {
+				blur false
+		}
+}
+
+layer-rule {
+		match namespace="swaync-control-center"
+
+		block-out-from "screencast"
+
+		shadow {
+				off
+		}
+
+		background-effect {
+				blur false
+				noise 0
+		}
+}

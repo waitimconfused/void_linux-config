@@ -1,0 +1,7 @@
+{
+	"custom/battery": {
+		"exec": "~/.config/waybar/script/battery.sh",
+		"restart-interval": 5,
+		"return-type": "raw"
+	}
+}

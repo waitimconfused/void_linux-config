@@ -1,0 +1,18 @@
+{
+	"group/system_stats": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 500,
+			"children-class": "drawer-child",
+			"transition-left-to-right": true
+		},
+		"modules": [
+			"custom/system",
+			"inhibitor",
+			"cpu",
+			"memory",
+			"disk",
+			"temperature"
+		]
+	}
+}

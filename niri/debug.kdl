@@ -1,0 +1,3 @@
+debug {
+		deactivate-unfocused-windows
+}

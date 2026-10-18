@@ -1,0 +1,14 @@
+{
+	"custom/sunsetr": {
+		"exec": "~/.config/waybar/script/sunsetr.sh",
+		"restart-interval": 5,
+		"return-type": "json",
+		"format": "<span foreground='#4E7B31' size='large'>{icon}</span> {text}",
+		"format-icons": {
+			"day": "󰖨",
+			"night": "󰽥",
+			"default": "󰁪"
+		},
+		"on-click": "~/.config/niri/script/sunsetr-cycle.sh"
+	}
+}

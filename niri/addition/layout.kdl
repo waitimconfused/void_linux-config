@@ -1,0 +1,74 @@
+layout {
+	gaps 8
+	always-center-single-column
+	empty-workspace-above-first
+	background-color "#00000000" // Transparent; wallpaer is placed within backdrop
+	center-focused-column "on-overflow"
+
+	preset-column-widths {
+		proportion 0.2500
+		proportion 0.3333
+		proportion 0.5000
+		proportion 0.6667
+		proportion 0.7500
+		proportion 1.0000
+	}
+
+	preset-window-heights {
+		proportion 0.2500
+		proportion 0.3333
+		proportion 0.5000
+		proportion 0.6667
+		proportion 0.7500
+		proportion 1.0000
+	}
+
+	default-column-width { proportion 0.5; }
+
+	focus-ring {
+		// off
+		width 2
+		active-color "#4E7B31"
+		inactive-color "#2E462B"
+	}
+
+	tab-indicator {
+		width 12
+		position "top"
+		gap 8
+		gaps-between-tabs 8
+		length total-proportion=1.0
+		corner-radius 4
+		place-within-column
+		active-color "#4E7B31"
+		inactive-color "#2E462B"
+		urgent-color "#BB334C"
+	}
+
+	border {
+		off
+		width 4
+		active-color "#ffc87f"
+		inactive-color "#505050"
+		urgent-color "#9b0000"
+		inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+	}
+
+	shadow {
+		softness 30
+		spread 5
+		offset x=0 y=5
+		color "#0007"
+	}
+
+	struts {
+		left 0
+		right 0
+		top 0
+		bottom 0
+	}
+
+	insert-hint {
+		color "#2E462BE6"
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"wlr/taskbar": {
+		"on-click": "activate",
+		"format": "{icon}",
+		"icon-size": 24
+	}
+}

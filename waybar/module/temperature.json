@@ -1,0 +1,7 @@
+{
+	"temperature": {
+		"format": "<span foreground='#4E7B31' size='large'>{icon}</span> {temperatureC}°",
+		"format-icons": [ "", "", "" ],
+		"tooltip-format": "Temperature\n\n{temperatureC}°C\n = {temperatureF}°F\n = {temperatureK}°K"
+	}
+}

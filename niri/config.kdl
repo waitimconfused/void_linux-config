@@ -1,0 +1,89 @@
+prefer-no-csd true
+
+include "debug.kdl"
+include "addition/layout.kdl"
+include "addition/input.kdl"
+include "addition/output.kdl"
+include "addition/window-rules.kdl"
+include "addition/layer-rules.kdl"
+include "addition/binds.kdl"
+include "addition/animations.kdl"
+
+screenshot-path "~/Pictures/Screenshots/%Y-%m-%d_%H:%M:%S.png"
+
+cursor {
+	xcursor-theme "Noir"
+}
+
+recent-windows {
+	highlight {
+		active-color "#112717"
+		padding 16
+		corner-radius 8
+	}
+
+	previews {
+		max-height 480
+		max-scale 0.5
+	}
+}
+
+spawn-sh-at-startup "swaync"
+spawn-sh-at-startup "pipewire"
+spawn-sh-at-startup "stasis"
+spawn-sh-at-startup "swaylock"
+spawn-sh-at-startup "swaybg -i ~/Wallpapers/back/Townscaper-Green.png -m fill"
+spawn-sh-at-startup "bash -c \"~/.config/waybar/launch.sh\""
+
+spawn-sh-at-startup "tailscale systray --tray dark:nobg"
+spawn-sh-at-startup "bash -c \"~/.config/niri/script/tailscale-drive.sh"
+
+spawn-sh-at-startup "bash -c \"~/.config/niri/script/brightness.sh\""
+spawn-sh-at-startup "sunsetr --background"
+spawn-sh-at-startup "brightnessctl set 100%"
+spawn-sh-at-startup "tailscale file get --loop ~/Downloads"
+spawn-sh-at-startup "pactl set-sink-volume @DEFAULT_SINK@ 25% && pactl set-sink-mute @DEFAULT_SINK@ 0"
+spawn-sh-at-startup "pactl set-source-volume @DEFAULT_SOURCE@ 100% && pactl set-sourse-mute @DEFAULT_SOURCE@ 1"
+
+clipboard {
+	disable-primary
+}
+
+hotkey-overlay {
+	skip-at-startup
+}
+
+blur {
+	noise 0.1
+	saturation 1
+	passes 3
+	offset 2.0
+}
+
+overview {
+	backdrop-color "#0F100F"
+	zoom 0.5
+
+	workspace-shadow {
+		softness 0
+		spread 4
+		offset x=0 y=0
+		color "#2E462B64"
+	}
+}
+
+gestures {
+		hot-corners {
+				// off
+		}
+
+	dnd-edge-view-scroll {
+		trigger-width 100
+		max-speed 2000
+	}
+
+	dnd-edge-workspace-switch {
+		trigger-height 100
+		max-speed 1500
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"inhibitor": {
+		"what": [ "idle", "shutdown", "sleep", "handle-power-key", "handle-suspend-key", "handle-hibernate-key", "handle-lid-switch" ],
+        "format": "<span foreground='#4E7B31' size='large'>{icon}</span>",
+        "format-icons": {
+            "activated": "󰒳",
+            "deactivated": "󰒲"
+        }
+    }
+}

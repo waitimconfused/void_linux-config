@@ -1,0 +1,7 @@
+{
+  "disk": {
+    "interval": 30,
+    "format": "<span foreground='#4E7B31' size='large'> </span> {percentage_used}%",
+    "tooltip-format": "Disk\n\n{used} / {total} ({percentage_used}%)"
+  }
+}

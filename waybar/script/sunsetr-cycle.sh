@@ -1,0 +1,1 @@
+/home/kenneth/.config/niri/script/sunsetr-cycle.sh

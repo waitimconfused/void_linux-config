@@ -1,0 +1,8 @@
+{
+	"custom/tailscale.exit_node": {
+		"exec": "~/.config/waybar/script/tailscale/exit_node.sh",
+		"return-type": "json",
+		"restart-interval": 5,
+		"on-click": "alacritty --title 'Tailscale' --command tsui"
+	}
+}

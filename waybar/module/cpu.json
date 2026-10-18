@@ -1,0 +1,8 @@
+{
+  "cpu": {
+    "interval": 10,
+    "format": "<span foreground='#4E7B31' size='large'> </span> {usage}%",
+    "tooltip-format": "CPU\n\nUsage: {usage}\nLoad: {load}%",
+    "max-length": 10
+  }
+}

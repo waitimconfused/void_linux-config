@@ -1,0 +1,13 @@
+[keyboard]
+
+bindings = [
+
+	{ key = "N", mods = "Control", command = { program = "/bin/bash", args = ["-c", "~/.config/alacritty/script/new-window.sh"] } },
+
+	{ key = "C", mods = "Control|Shift", action = "Copy" },
+	{ key = "V", mods = "Control|Shift", action = "Paste" },
+
+	#  key = "=", mods = "Control", action = "IncreaseFontSize" },
+	# { key = "-", mods = "Control", action = "DecreaseFontSize" },
+	# { key = "0", mods = "Control", action = "ResetFontSize" }
+]

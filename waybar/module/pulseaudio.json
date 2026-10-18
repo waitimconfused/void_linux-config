@@ -1,0 +1,34 @@
+{
+	"pulseaudio#output": {
+		"target": "sink",
+		"format": "<span foreground='#4E7B31' size='large'>{icon}</span> {volume}%",
+		"format-muted": "<span foreground='#4E7B31' size='large'>{icon}</span> <span strikethrough='true'>{volume}%</span>",
+		"format-icons": {
+			"default": [
+				"",
+				"",
+				""
+			]
+		},
+		"tooltip": true,
+		"tooltip-format": "OUTPUT\n\nName: {desc}\nVolume: {volume}%",
+		"scroll-step": 5,
+		"smooth-scrolling-threshold": 2,
+		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+	},
+	"pulseaudio#input": {
+		"target": "source",
+		"format": "{format_source}",
+		"format-source": "<span foreground='#4E7B31' size='large'></span> {volume}%",
+		"format-source-muted": "<span foreground='#4E7B31' size='large'></span> <span strikethrough='true'>{volume}%</span>",
+		"tooltip": true,
+		"tooltip-format": "INPUT\n\nName: {source_desc}\nVolume: {source_volume}%",
+		"scroll-step": 5,
+		"smooth-scrolling-threshold": 2,
+		"on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
+		"on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
+		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+	}
+}

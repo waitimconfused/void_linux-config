@@ -1,0 +1,7 @@
+{
+	"custom/battery.bluetooth": {
+		"exec": "~/.config/waybar/script/bluetooth-battery.sh",
+		"restart-interval": 5,
+		"return-type": "raw"
+	}
+}

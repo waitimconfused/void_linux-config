@@ -1,0 +1,15 @@
+{
+	"bluetooth": {
+		"format": "<span foreground='#4E7B31' size='large'>󰂯</span> {status}",
+		"format-connected": "<span foreground='#4E7B31' size='large'>󰂯</span> {device_alias}",
+		"format-connected-battery": "<span foreground='#4E7B31' size='large'>󰂯</span> {device_alias} {icon}",
+		"format-icons": [ " ", " ", " ", " ", " " ],
+
+		"tooltip-format": "BLUETOOTH\n\nMaster: {controller_alias} ({controller_address})",
+		"tooltip-format-connected": "BLUETOOTH\n\nMaster: {controller_alias} ({controller_address})\nDevices:\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "\t- {device_alias} ({device_address})",
+		"tooltip-format-enumerate-connected-battery": "\t- {device_alias} ({device_address})\n\t\tBattery: {device_battery_percentage}%",
+		
+		"on-click": "blueman-manager"
+	}
+}

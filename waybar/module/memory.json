@@ -1,0 +1,8 @@
+{
+	"memory": {
+		"interval": 30,
+		"format": "<span foreground='#4E7B31' size='large'> </span> {percentage}%",
+		"max-length": 10,
+		"tooltip-format": "RAM\n\nMemory: {used}GiB / {total}GiB ({percentage}%)\nSwap: {swapUsed}GiB / {swapTotal}GiB ({swapPercentage}%)"
+	}
+}
