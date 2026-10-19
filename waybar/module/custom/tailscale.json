@@ -1,0 +1,8 @@
+{
+	"custom/tailscale": {
+		"exec": "~/.config/waybar/script/tailscale.sh",
+		"return-type": "json",
+		"restart-interval": 5,
+		"format": "{text}"
+	}
+}

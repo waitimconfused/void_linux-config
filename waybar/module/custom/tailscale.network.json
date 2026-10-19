@@ -1,8 +1,8 @@
 {
 	"custom/tailscale.network": {
 		"exec": "~/.config/waybar/script/tailscale/network.sh",
-		"return-type": "json",
 		"restart-interval": 5,
-		"on-click": "alacritty --title 'Tailscale' --command tsui"
+		"return-type": "json",
+		"format": "{text}"
 	}
 }

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-BATTERY_DIR="/sys/class/power_supply/BAT0"
-ACAD_DIR="/sys/class/power_supply/AC"
+BAT_DIR="/sys/class/power_supply/BAT0"
+AC_DIR="/sys/class/power_supply/AC"
 
 colour_background="#112717"
 colour_foreground="#AAE8B6"
@@ -26,7 +26,7 @@ tlp_POWERSAVER="󰾆 "
 show() {
 	message="<span foreground='#4E7B31' size='large'>"
 
-	STATUS=$(cat $BATTERY_DIR/status)
+	STATUS=$(cat $BAT_DIR/status)
 
 	case $STATUS in
 	"Discharging")
@@ -38,7 +38,7 @@ show() {
 		message="$message$icon_charging "
 		;;
 	"Full")
-		ac_connected=$(cat $ACAD_DIR/online)
+		ac_connected=$(cat $AC_DIR/online)
 
 		if [[ $ac_connected = "1" ]]; then
 			message="$message$icon_charging "
@@ -46,7 +46,7 @@ show() {
 		;;
 	esac
 
-	percentage=$(cat $BATTERY_DIR/capacity)
+	percentage=$(cat $BAT_DIR/capacity)
 
 	if [[ $percentage -le 20 ]]; then
 		message="$message<span foreground='#BB334C'>$icon_danger</span> $icon_battery_0"
@@ -75,25 +75,33 @@ show() {
 
 	message="$message <span foreground='#4E7B31' size='large'>"
 
+	icon="($MODE)"
+
 	case $MODE in
 	"performance/AC")
-		message="$message$tlp_PERFORMANCE"
+		icon="$tlp_PERFORMANCE"
 		;;
 	"balanced/BAT")
-		message="$message$tlp_BALANCED"
+		icon="$tlp_BALANCED"
 		;;
 	"power-saver/SAV")
-		message="$message$tlp_POWERSAVER"
+		icon="$tlp_POWERSAVER"
 		;;
 	*)
-		message="$message($MODE)"
+		icon="($MODE)"
 		;;
 	esac
 
-	message="$message</span>"
+	message="$message$icon</span>"
 
-	echo $message
+	thresh_start=$(cat "$BAT_DIR/charge_control_start_threshold")
+	thresh_end=$(cat "$BAT_DIR/charge_control_end_threshold")
 
+	echo "{
+		\"text\": \"$message\",
+		\"alt\": \"\",
+		\"tooltip\": \"BATTERY\n\nPercentage: $percentage% ($STATUS)\nState: $MODE $icBAT_DIRon\nCharge Threshold: [ $thresh_start% -> $thresh_end% ]\"
+	}"
 }
 
 while true; do

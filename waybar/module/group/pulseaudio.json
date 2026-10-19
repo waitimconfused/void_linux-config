@@ -1,14 +1,9 @@
 {
 	"group/pulseaudio": {
 		"orientation": "inherit",
-		"drawer": {
-			"transition-duration": 500,
-			"children-class": "drawer-child",
-			"transition-left-to-right": false
-		},
 		"modules": [
-			"pulseaudio#output",
-			"pulseaudio#input"
+			"pulseaudio#input",
+			"pulseaudio#output"
 		]
 	}
 }
