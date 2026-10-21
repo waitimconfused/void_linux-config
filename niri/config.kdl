@@ -74,7 +74,8 @@ overview {
 
 gestures {
 		hot-corners {
-				// off
+				bottom-left
+				bottom-right
 		}
 
 	dnd-edge-view-scroll {
