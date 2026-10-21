@@ -97,10 +97,15 @@ show() {
 	thresh_start=$(cat "$BAT_DIR/charge_control_start_threshold")
 	thresh_end=$(cat "$BAT_DIR/charge_control_end_threshold")
 
+	charge_full=$(cat "$BAT_DIR/charge_full")
+	charge_full_design=$(cat "$BAT_DIR/charge_full_design")
+
+	max_percentage=$((100 * charge_full / charge_full_design))
+
 	echo "{
 		\"text\": \"$message\",
 		\"alt\": \"\",
-		\"tooltip\": \"BATTERY\n\nPercentage: $percentage% ($STATUS)\nState: $MODE $icBAT_DIRon\nCharge Threshold: [ $thresh_start% -> $thresh_end% ]\"
+		\"tooltip\": \"BATTERY\n\nPercentage: $percentage% ($STATUS)\nState: $MODE $icBAT_DIRon\nMax Percentage: $max_percentage%\nCharge Threshold: [ $thresh_start% -> $thresh_end% ]\"
 	}"
 }
 
