@@ -26,12 +26,13 @@ binds {
 	Alt+XF86AudioRaiseVolume	allow-when-locked=true	{ spawn-sh "playerctl next"; }
 	Alt+XF86AudioLowerVolume	allow-when-locked=true	{ spawn-sh "playerctl previous"; }
 
-	XF86MonBrightnessUp		allow-when-locked=true	cooldown-ms=100	{ spawn-sh "brightnessctl set +10%"; }
-	XF86MonBrightnessDown	allow-when-locked=true	cooldown-ms=100	{ spawn-sh "brightnessctl set 10%-"; }
+	XF86MonBrightnessUp		allow-when-locked=true	cooldown-ms=100	{ spawn-sh "brightnessctl set +5%"; }
+	XF86MonBrightnessDown	allow-when-locked=true	cooldown-ms=100	{ spawn-sh "brightnessctl set 5%-"; }
 
 	Mod+O	repeat=false	{ toggle-overview; }
 	Mod+Q	repeat=false	{ close-window; }
-	Mod+N	repeat=false	{ spawn-sh "swaync-client -R -rs && swaync-client -t"; }
+
+	Mod+N	repeat=false	hotkey-overlay-title="Toggle Notification Layer (swaync)"		{ spawn-sh "swaync-client -R -rs && swaync-client -t"; }
 
 	Mod+Left	{ focus-column-left; }
 	Mod+Down	{ focus-window-down; }
