@@ -12,7 +12,7 @@ default:
   ignore_remote_media false
 
   suspend_inhibit_media [ ]
-  inhibit_apps [ ]
+  inhibit_apps [ "discord" ]
   suspend_inhibit_apps [ ]
 
   lid_close_action "stasis trigger dpms && stasis trigger lock_screen && stasis trigger suspend"
