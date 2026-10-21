@@ -1,0 +1,102 @@
+[
+	{
+		"input_combination": [
+			{
+				"type": 1,
+				"code": 256,
+				"origin_hash": "0a62b58470fe27c9f3a2ae0b9e892e32"
+			},
+			{
+				"type": 3,
+				"code": 40,
+				"origin_hash": "0a62b58470fe27c9f3a2ae0b9e892e32",
+				"analog_threshold": 30
+			}
+		],
+		"target_uinput": "keyboard",
+		"output_symbol": "KEY_LEFTALT+KEY_0",
+		"name": "Button 0",
+		"mapping_type": "key_macro"
+	},
+	{
+		"input_combination": [
+			{
+				"type": 1,
+				"code": 257,
+				"origin_hash": "0a62b58470fe27c9f3a2ae0b9e892e32"
+			},
+			{
+				"type": 3,
+				"code": 40,
+				"origin_hash": "0a62b58470fe27c9f3a2ae0b9e892e32",
+				"analog_threshold": 30
+			}
+		],
+		"target_uinput": "keyboard",
+		"output_symbol": "KEY_LEFTALT+KEY_1",
+		"name": "Button 1",
+		"mapping_type": "key_macro"
+	},
+	{
+		"input_combination": [
+			{
+				"type": 1,
+				"code": 331,
+				"origin_hash": "203c32c65e99a8e46db51513cb019f98"
+			}
+		],
+		"target_uinput": "keyboard + mouse",
+		"output_symbol": "KEY_LEFTALT+KEY_E",
+		"mapping_type": "key_macro"
+	},
+	{
+		"input_combination": [
+			{
+				"type": 1,
+				"code": 332,
+				"origin_hash": "203c32c65e99a8e46db51513cb019f98"
+			}
+		],
+		"target_uinput": "keyboard + mouse",
+		"output_symbol": "KEY_LEFTALT+KEY_P",
+		"mapping_type": "key_macro"
+	},
+	{
+		"input_combination": [
+			{
+				"type": 1,
+				"code": 258,
+				"origin_hash": "0a62b58470fe27c9f3a2ae0b9e892e32"
+			},
+			{
+				"type": 3,
+				"code": 40,
+				"origin_hash": "0a62b58470fe27c9f3a2ae0b9e892e32",
+				"analog_threshold": 30
+			}
+		],
+		"target_uinput": "keyboard",
+		"output_symbol": "KEY_LEFTCTRL+KEY_Z",
+		"name": "Button 2",
+		"mapping_type": "key_macro"
+	},
+	{
+		"input_combination": [
+			{
+				"type": 1,
+				"code": 259,
+				"origin_hash": "0a62b58470fe27c9f3a2ae0b9e892e32"
+			},
+			{
+				"type": 3,
+				"code": 40,
+				"origin_hash": "0a62b58470fe27c9f3a2ae0b9e892e32",
+				"analog_threshold": 30
+			}
+		],
+		"target_uinput": "keyboard",
+		"output_symbol": "KEY_LEFTCTRL+KEY_LEFTSHIFT+KEY_Z",
+		"name": "Button 3",
+		"mapping_type": "key_macro"
+	}
+]
