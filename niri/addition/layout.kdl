@@ -3,7 +3,7 @@ layout {
 	always-center-single-column
 	empty-workspace-above-first
 	background-color "#00000000" // Transparent; wallpaer is placed within backdrop
-	center-focused-column "on-overflow"
+	// center-focused-column "on-overflow"
 
 	preset-column-widths {
 		proportion 0.2500
