@@ -3,8 +3,6 @@
 	"position": "top",
 	"height": 42,
 
-	"on-sigusr1": "hide",
-	"on-sigusr2": "show",
 	"start_hidden": false,
 
 	"include": [
