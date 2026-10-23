@@ -15,7 +15,7 @@ default:
   inhibit_apps [ "discord" ]
   suspend_inhibit_apps [ ]
 
-  lid_close_action "stasis trigger dpms && stasis trigger lock_screen && stasis trigger suspend"
+  lid_close_action "~/.config/stasis/close-lid.sh"
 
   # AC power
   ac:
@@ -27,7 +27,7 @@ default:
 
     lock_screen:
       timeout 10
-      command "swaylock"
+      command "playerctl pause && swaylock"
     end
 
     suspend:
